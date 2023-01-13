@@ -1,0 +1,58 @@
+﻿<Window x:Class="Tamagotchi_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tamagotchi_WPF"
+        mc:Ignorable="d"
+        Title="Tamagotchi" Height="600" Width="500" ResizeMode="CanMinimize" Background="#BACFB3" 
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.2*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.4*"/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="#96AF8E" BorderThickness="0 0 0 5" Grid.ColumnSpan="3" Background="#B1D5DD">
+            <Image Source="Pictures/IMG_0297 (1).png" />
+        </Border>
+            <Image Source="Pictures/IMG_0296.png" Grid.Row="1" Grid.RowSpan="8" Grid.ColumnSpan="3" Width="500" Stretch="UniformToFill"/>
+        <TextBlock Text="Welcome to a Tamagotchi game!" FontSize="17" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        
+        <!-- Bottom -->
+        <!--<Image Source="Pictures/Tree.png" Grid.Row="1" Grid.RowSpan="6" Grid.Column="1"/>-->
+        <Button x:Name="btn_New_Game" Padding="0" FontSize="16" Click="btn_New_Game_Click" Grid.Row="2" Grid.Column="1" Height="35" Width="130" Background="#B1D5DD" BorderBrush="#96AF8E" BorderThickness="0 0 0 4">
+            <Grid>
+                <Image Source="Pictures/btn2.png" Stretch="None" />
+                <Label Content="New Game" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+            </Grid>
+        </Button>
+        <Button  x:Name="btn_Saves" FontSize="16" Click="btn_Saves_Click" Grid.Row="3" Grid.Column="1" Height="35" Width="130" Background="#B1D5DD" BorderBrush="#96AF8E" BorderThickness="0 0 0 4">
+        <Grid>
+                <Image Source="Pictures/btn2.png" Stretch="None" />
+                <Label Content="Saves" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+            </Grid>
+        </Button>
+        <Button x:Name="btn_Help" FontSize="16" Click="btn_Help_Click" Grid.Row="4" Grid.Column="1" Height="35" Width="130" Background="#B1D5DD" BorderBrush="#96AF8E" BorderThickness="0 0 0 4">
+            <Grid>
+                <Image Source="Pictures/btn2.png" Stretch="None" />
+                <Label Content="Help" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+            </Grid>
+        </Button>
+        <Button x:Name="btn_Exit_Game" FontSize="16" Click="btn_Exit_Game_Click" Grid.Row="5" Grid.Column="1" Height="35" Width="130" Background="#B1D5DD" BorderBrush="#96AF8E" BorderThickness="0 0 0 4">
+            <Grid>
+                <Image Source="Pictures/btn2.png" Stretch="None" />
+                <Label Content="Exit Game" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+            </Grid>
+        </Button>
+    </Grid>
+</Window>
