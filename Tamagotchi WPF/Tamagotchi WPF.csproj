@@ -12,6 +12,7 @@
     <None Remove="btn2.png" />
     <None Remove="IMG_0296.png" />
     <None Remove="IMG_0297 %281%29.png" />
+    <None Remove="Pictures\Menu.png" />
     <None Remove="Tree.png" />
   </ItemGroup>
 
@@ -23,6 +24,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Pictures\IMG_0297 %281%29.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Menu.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Pictures\Tree.png">

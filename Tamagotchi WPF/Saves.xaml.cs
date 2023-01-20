@@ -15,11 +15,13 @@ using System.Windows.Shapes;
 namespace Tamagotchi_WPF
 {
     /// <summary>
-    /// Interaction logic for Game.xaml
+    /// Interaction logic for Saves.xaml
     /// </summary>
-    public partial class Game : Window
+    public partial class Saves : Window
     {
-        public Game()
+        public string Navn { get; set; }
+
+        public Saves()
         {
             InitializeComponent();
         }

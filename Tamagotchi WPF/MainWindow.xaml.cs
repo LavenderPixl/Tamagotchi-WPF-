@@ -20,15 +20,20 @@ namespace Tamagotchi_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        NewGame NG = new NewGame();
+        Game G = new Game();
+        Saves S = new Saves();
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-      
+
         private void btn_New_Game_Click(object sender, RoutedEventArgs e)
         {
-
+            S.Show();
+            this.Close();
         }
 
         private void btn_Saves_Click(object sender, RoutedEventArgs e)
@@ -44,6 +49,10 @@ namespace Tamagotchi_WPF
         private void btn_Exit_Game_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tamagotchi_WPF"
         mc:Ignorable="d"
-        Title="Tamagotchi" Height="600" Width="500" ResizeMode="CanMinimize" Background="#BACFB3">
+        WindowStartupLocation="CenterScreen"
+        Closed="Window_Closed"
+        Title="Tamagotchi" Height="640" Width="500" ResizeMode="CanMinimize" Background="#BACFB3">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -13,16 +15,28 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="0.4*"/>
-            <RowDefinition Height="0.4*"/>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="375"/>
+            <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
-        <Rectangle Fill="Red" Height="375" Grid.Row="3" Grid.ColumnSpan="3" />
+
+        <Image Source="Pictures/IMG_0296.png" Grid.RowSpan="5" Grid.ColumnSpan="3" Stretch="UniformToFill"/>
+        <Border BorderBrush="#8DBDC8" BorderThickness="0 0 0 5" Grid.ColumnSpan="3" Grid.RowSpan="2" Background="#B1D5DD">
+            <Image Source="Pictures/IMG_0297 (1).png" />
+        </Border>
+        <Rectangle Fill ="White" Height="375" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="3" VerticalAlignment="Top" />
+        <!--Game Space-->
 
 
+        <Border Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" BorderBrush="#8DBDC8" BorderThickness="3" Margin="10,0,9,0">
+            <Rectangle x:Name="AskingBox" Fill="#B1D5DD"/>
+        </Border>
+        <TextBlock Text="Ooga" TextWrapping="Wrap" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Width="339" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
 
+
+        <TextBlock Text="@LavenderPixl" Grid.Row="4" Grid.ColumnSpan="2" Opacity="0.3" VerticalAlignment="Bottom" Margin="10,0,0,6"/>
 
     </Grid>
 </Window>
