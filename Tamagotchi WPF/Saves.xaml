@@ -5,17 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tamagotchi_WPF"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Closed="Window_Closed"
         Title="Tamagotchi" Height="640" Width="500" ResizeMode="CanMinimize" Background="#BACFB3">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="199"/>
-            <RowDefinition Height="441"/>
+            <RowDefinition Height="402"/>
         </Grid.RowDefinitions>
         <Image Source="Pictures/IMG_0296.png" Grid.Row="1" Stretch="UniformToFill" />
 
         <Border BorderBrush="#96AF8E" BorderThickness="0 0 0 5" Background="#B1D5DD">
-            <Image Source="Pictures/IMG_0297 (1).png" />
+            <Image Source="Pictures/IMG_0297 (1).png" Stretch="UniformToFill" />
         </Border>
+        
+        <TextBlock Text="Bind if NEW SAVE or PICK SAVES" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
 
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -25,35 +30,157 @@
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.ColumnSpan="2" Grid.Column="1">
-                <Border  Width="182" Height="44" BorderBrush="#96AF8E" BorderThickness="0 0 0 3" Margin="0 50 0 0">
 
-
+            <StackPanel Grid.ColumnSpan="2" Grid.Column="1" Margin="0 40 0 20">
+                <Border  Width="182" Height="44" BorderBrush="#96AF8E" BorderThickness="0 0 0 3" >
                     <!--<ItemsControl ItemsSource="{Binding Tama}">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>-->
-                    <Button HorizontalContentAlignment="Left" Padding="0" BorderThickness="0">
-                        <Grid Width="182">
+                    <Button x:Name="Button_1" HorizontalContentAlignment="Left" Padding="0" BorderThickness="0" Click="Button_1_Click">
+                        <Grid Width="182" Height="44">
                             <Image Source="Pictures/btn2.png" Stretch="UniformToFill" />
-                            <StackPanel Orientation="Vertical" >
-                                <TextBlock Text="{Binding Navn}" Margin="5 0 0 0"/>
-                                <StackPanel Orientation="Horizontal" Margin="5 0 0 0">
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Text="Bind Navn" VerticalAlignment="Center"/>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                     <TextBlock Text="Lvl."/>
-                                    <TextBlock Text="{Binding Level}" Margin="3 0 0 0"/>
+                                    <TextBlock Text="Bind Level" Margin="5 0 0 0"/>
                                 </StackPanel>
                             </StackPanel>
                         </Grid>
-
                     </Button>
-
                     <!--</DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>-->
                 </Border>
+
+                <Border  Width="182" Height="44" BorderBrush="#96AF8E" BorderThickness="0 0 0 3" Margin="0 15 0 0">
+                    <!--<ItemsControl ItemsSource="{Binding Tama}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>-->
+                    <Button x:Name="Button_2" HorizontalContentAlignment="Left" Padding="0" BorderThickness="0" Click="Button_2_Click">
+                        <Grid Width="182" Height="44">
+                            <Image Source="Pictures/btn2.png" Stretch="UniformToFill" />
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Text="Bind Navn" VerticalAlignment="Center"/>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <TextBlock Text="Lvl."/>
+                                    <TextBlock Text="Bind Level" Margin="5 0 0 0"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                    </Button>
+                    <!--</DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>-->
+                </Border>
+
+                <Border  Width="182" Height="44" BorderBrush="#96AF8E" BorderThickness="0 0 0 3" Margin="0 15 0 0">
+                    <!--<ItemsControl ItemsSource="{Binding Tama}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>-->
+                    <Button x:Name="Button_3" HorizontalContentAlignment="Left" Padding="0" BorderThickness="0" Click="Button_3_Click">
+                        <Grid Width="182" Height="44">
+                            <Image Source="Pictures/btn2.png" Stretch="UniformToFill" />
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Text="Bind Navn" VerticalAlignment="Center"/>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <TextBlock Text="Lvl."/>
+                                    <TextBlock Text="Bind Level" Margin="5 0 0 0"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                    </Button>
+                    <!--</DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>-->
+                </Border>
+
+                <Border  Width="182" Height="44" BorderBrush="#96AF8E" BorderThickness="0 0 0 3" Margin="0 15 0 0">
+                    <!--<ItemsControl ItemsSource="{Binding Tama}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>-->
+                    <Button x:Name="Button_4" HorizontalContentAlignment="Left" Padding="0" BorderThickness="0" Click="Button_4_Click">
+                        <Grid Width="182" Height="44">
+                            <Image Source="Pictures/btn2.png" Stretch="UniformToFill" />
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Text="Bind Navn" VerticalAlignment="Center"/>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <TextBlock Text="Lvl."/>
+                                    <TextBlock Text="Bind Level" Margin="5 0 0 0"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                    </Button>
+                    <!--</DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>-->
+                </Border>
+
+                <Border  Width="182" Height="44" BorderBrush="#96AF8E" BorderThickness="0 0 0 3" Margin="0 15 0 0">
+                    <!--<ItemsControl ItemsSource="{Binding Tama}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>-->
+                    <Button x:Name="Button_5" HorizontalContentAlignment="Left" Padding="0" BorderThickness="0" Click="Button_5_Click">
+                        <Grid Width="182" Height="44">
+                            <Image Source="Pictures/btn2.png" Stretch="UniformToFill" />
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Text="Bind Navn" VerticalAlignment="Center"/>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <TextBlock Text="Lvl."/>
+                                    <TextBlock Text="Bind Level" Margin="5 0 0 0"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                    </Button>
+                    <!--</DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>-->
+                </Border>
+
+                <Border  Width="182" Height="44" BorderBrush="#96AF8E" BorderThickness="0 0 0 3" Margin="0 15 0 0">
+                    <!--<ItemsControl ItemsSource="{Binding Tama}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>-->
+                    <Button x:Name="Button_6" HorizontalContentAlignment="Left" Padding="0" BorderThickness="0" Click="Button_6_Click">
+                        <Grid Width="182" Height="44">
+                            <Image Source="Pictures/btn2.png" Stretch="UniformToFill" />
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Text="Bind Navn" VerticalAlignment="Center"/>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <TextBlock Text="Lvl."/>
+                                    <TextBlock Text="Bind Level" Margin="5 0 0 0"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                    </Button>
+                    <!--</DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>-->
+                </Border>
+
+
             </StackPanel>
 
-
+            <!-- HOME MENU -->
+            <Border Height="35" BorderBrush="#96AF8E" BorderThickness="0 0 0 3" Grid.Column="3" Grid.ColumnSpan="2" Margin="4 0 10 23" VerticalAlignment="Bottom">
+                <Button x:Name="Btn_Home_Menu" Padding="0" BorderThickness="0" Click="Btn_Home_Menu_Click">
+                    <Grid>
+                        <Image Source="Pictures/btn2.png" Stretch="UniformToFill" />
+                        <TextBlock Text="Home Menu" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </Button>
+            </Border>
+                <!--</DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>-->
         </Grid>
 
+        <!-- @ Profile -->
+        <TextBlock x:Name="Link" Grid.Row="4" Grid.ColumnSpan="2" Opacity="0.3" VerticalAlignment="Bottom" Margin="10,0,0,6">
+            <Hyperlink NavigateUri="https://github.com/LavenderPixl" RequestNavigate="Hyperlink_RequestNavigate" Foreground="Black" TextDecorations="None">  
+                @LavenderPixl
+            </Hyperlink>
+        </TextBlock>
+        
     </Grid>
 </Window>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,7 @@ namespace Tamagotchi_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        NewGame NG = new NewGame();
         Game G = new Game();
-        Saves S = new Saves();
 
         public MainWindow()
         {
@@ -32,18 +31,22 @@ namespace Tamagotchi_WPF
 
         private void btn_New_Game_Click(object sender, RoutedEventArgs e)
         {
-            S.Show();
+            NewGame NG = new NewGame();
+            G.Show();
             this.Close();
         }
 
         private void btn_Saves_Click(object sender, RoutedEventArgs e)
         {
-
+            Saves S = new Saves();
+            S.Show();
+            this.Close();
         }
 
         private void btn_Help_Click(object sender, RoutedEventArgs e)
         {
-
+            Help H = new Help();
+            H.Show();
         }
 
         private void btn_Exit_Game_Click(object sender, RoutedEventArgs e)
@@ -53,6 +56,11 @@ namespace Tamagotchi_WPF
         private void Window_Closed(object sender, EventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri) { UseShellExecute = true });
         }
     }
 }

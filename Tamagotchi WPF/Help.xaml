@@ -1,0 +1,60 @@
+﻿<Window x:Class="Tamagotchi_WPF.Help"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tamagotchi_WPF"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Tamagotchi" Height="640" Width="500" ResizeMode="CanMinimize" Background="#BACFB3">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="103"/>
+            <RowDefinition Height="498"/>
+        </Grid.RowDefinitions>
+        <Image Source="Pictures/IMG_0296.png" Grid.Row="1" Stretch="UniformToFill" />
+
+        <Border BorderBrush="#96AF8E" BorderThickness="0 0 0 5" Background="#B1D5DD">
+            <Image Source="Pictures/IMG_0297 (1).png" Stretch="UniformToFill" />
+        </Border>
+
+        <TextBlock Text="Need help?" FontSize="17" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Width="250">
+                <StackPanel Orientation="Vertical" Margin="0 25 0 0">
+                    <TextBlock Text="How do I play this game?" FontSize="17"/>
+                    <TextBlock Text="This game gives you a pet Tamagotchi to take care of. You have to feed, entertain and clean it, to keep it happy and content!" TextWrapping="Wrap" FontSize="14"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="0 25 0 0">
+                    <TextBlock Text="Stand-in Text" FontSize="17"/>
+                    <TextBlock Text="Text!" TextWrapping="Wrap" FontSize="14"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="0 25 0 0">
+                    <TextBlock Text="Im having technical issues!" FontSize="17" />
+                    <TextBlock Text="In case you run into other bugs within the game, please send me a message on Github, and I’ll look into it!" TextWrapping="Wrap" FontSize="14"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="0 25 0 0">
+                    <TextBlock Text="Where is the name from?" FontSize="17"/>
+                    <TextBlock Text="This game is based on Tamagotchi! Tamagotchi was a japanese handheld game created in 1996 by Aki Maita, from the company Bandai. 
+                               It required you to take care of a digital pet, just like this one!" TextWrapping="Wrap" FontSize="14"/>
+                </StackPanel>
+            </StackPanel>
+
+            <!-- HOME MENU -->
+            <Border Height="35" Width="100" BorderBrush="#96AF8E" BorderThickness="0 0 0 3" Margin="4 0 10 23" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+                <Button x:Name="Btn_Home_Menu" Padding="0" BorderThickness="0" Click="Btn_Home_Menu_Click">
+                    <Grid>
+                        <Image Source="Pictures/btn2.png" Stretch="UniformToFill" />
+                        <Label Content="Home Menu" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </Button>
+            </Border>
+        </Grid>
+    </Grid>
+
+
+</Window>

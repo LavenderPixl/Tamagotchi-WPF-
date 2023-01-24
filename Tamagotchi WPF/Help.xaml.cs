@@ -11,29 +11,23 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Diagnostics;
 
 namespace Tamagotchi_WPF
 {
     /// <summary>
-    /// Interaction logic for NewGame.xaml
+    /// Interaction logic for Help.xaml
     /// </summary>
-    public partial class NewGame : Window
+    public partial class Help : Window
     {
-        public NewGame()
+        public Help()
         {
             InitializeComponent();
         }
+        
 
-        private void Window_Closed(object sender, EventArgs e)
+        private void Btn_Home_Menu_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
-        }
-
-
-        private void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
-        {
-            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri) { UseShellExecute = true });
+            this.Close();
         }
     }
 }

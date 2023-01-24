@@ -10,9 +10,9 @@
         Title="Tamagotchi" Height="640" Width="500" ResizeMode="CanMinimize" Background="#BACFB3">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="120"/>
+            <RowDefinition Height="106"/>
             <RowDefinition Height="385"/>
-            <RowDefinition Height="120"/>
+            <RowDefinition Height="110"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -23,6 +23,7 @@
         <Image Source="Pictures/IMG_0296.png" Grid.RowSpan="3" Grid.ColumnSpan="3" Stretch="UniformToFill"/>
 
         <Grid Grid.ColumnSpan="3" Grid.Row="0">
+
             <!--Box with Info inside-->
             <Grid.RowDefinitions>
                 <RowDefinition Height="62"/>
@@ -45,6 +46,7 @@
                 </Border>
             </StackPanel>
             <Grid Width="317" Height="64" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="22 0 0 0" Grid.RowSpan="2">
+
                 <!-- Text in Box -->
                 <StackPanel VerticalAlignment="Center" >
                     <TextBlock Text="Lvl." Padding="10 0 0 0" />
@@ -52,9 +54,8 @@
                 </StackPanel>
             </Grid>
 
-
             <Border Grid.Column="2" HorizontalAlignment="Right" Width="29" Height="33" Margin="0 0 10 0" >
-                <Button BorderThickness="0 0 0 2" BorderBrush="#8DBDC8">
+                <Button x:Name="Btn_Menu" BorderThickness="0 0 0 2" BorderBrush="#8DBDC8" Click="Btn_Menu_Click">
                     <Image Source="Pictures/Menu.Png" Width="20" SnapsToDevicePixels="True"/>
                     <!--ICON: https://www.flaticon.com/authors/pixel-perfect-->
                 </Button>
@@ -63,9 +64,8 @@
 
 
         <Rectangle Fill ="White" Height="375" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3" VerticalAlignment="Top" />
-        <!-- Game Area -->
 
-        <TextBlock Text="@LavenderPixl" Opacity="0.4" VerticalAlignment="Bottom" Margin="10 0 0 10" Grid.Row="2"/>
+        <!-- Game Area -->
         <Grid Grid.Row="2" Grid.ColumnSpan="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
@@ -89,18 +89,42 @@
             </Border>
 
             <!--Buttons for NEEDS-->
-            <Border Height="32" Width="119" Grid.RowSpan="2" VerticalAlignment="Center" >
-                <Button BorderBrush="#8DBDC8" BorderThickness="0 0 0 3"/>
-            </Border>
 
-            <Border Height="32" Width="119" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Center">
-                <Button BorderBrush="#8DBDC8" BorderThickness="0 0 0 3"/>
+            <!-- Food & Drinks-->
+            <Border Height="32" Width="119" Grid.RowSpan="2" VerticalAlignment="Center" BorderBrush="#8DBDC8" BorderThickness="0 0 0 3">
+                <Button x:Name="Btn_FoodDrinks" Padding="0" BorderThickness="0" Click="Btn_FoodDrinks_Click">
+                    <Grid>
+                        <Image Source="Pictures/btn2.png" Stretch="UniformToFill" />
+                        <TextBlock Text="Food and Drinks" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Grid>
+                </Button>
             </Border>
-
-            <Border Height="32" Width="119" Grid.Column="2" Grid.RowSpan="2" VerticalAlignment="Center">
-                <Button BorderBrush="#8DBDC8" BorderThickness="0 0 0 3"/>
+            <!-- Amusement -->
+            <Border Height="32" Width="119" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Center" BorderBrush="#8DBDC8" BorderThickness="0 0 0 3">
+                <Button x:Name="Btn_Amusement" Padding="0" BorderThickness="0" Click="Btn_Amusement_Click">
+                    <Grid>
+                        <Image Source="Pictures/btn2.png" Stretch="UniformToFill" />
+                        <TextBlock Text="Amusement" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Grid>
+                </Button>
+            </Border>
+            <!-- Care -->
+            <Border Height="32" Width="119" Grid.Column="2" Grid.RowSpan="2" VerticalAlignment="Center" BorderBrush="#8DBDC8" BorderThickness="0 0 0 3">
+                <Button x:Name="Btn_Care" Padding="0" BorderThickness="0" Click="Btn_Care_Click">
+                    <Grid>
+                        <Image Source="Pictures/btn2.png" Stretch="UniformToFill" />
+                        <TextBlock Text="Care" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Grid>
+                </Button>
             </Border>
         </Grid>
+
+        <!-- @ Profile -->
+        <TextBlock x:Name="Link" Grid.Row="4" Grid.ColumnSpan="2" Opacity="0.3" VerticalAlignment="Bottom" Margin="10,0,0,6">
+            <Hyperlink NavigateUri="https://github.com/LavenderPixl" RequestNavigate="Hyperlink_RequestNavigate" Foreground="Black" TextDecorations="None">  
+                @LavenderPixl
+            </Hyperlink>
+        </TextBlock>
 
     </Grid>
 </Window>

@@ -55,8 +55,20 @@
                 <Label Content="Exit Game" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
             </Grid>
         </Button>
-        <TextBlock Text="@LavenderPixl" Grid.Row="6" Opacity="0.4" VerticalAlignment="Bottom" Margin="10 0 0 10"/>
-       
+
+        <Border Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Right" Width="29" Height="33" Margin="0 10 10 0" >
+            <Button x:Name="Btn_Menu" BorderThickness="0 0 0 2" BorderBrush="#8DBDC8">
+                <Image Source="Pictures/Menu.Png" Width="20" SnapsToDevicePixels="True"/>
+                <!--ICON: https://www.flaticon.com/authors/pixel-perfect-->
+            </Button>
+        </Border>
+
+        <!-- @ Profile -->
+        <TextBlock x:Name="Link" Grid.Row="6" Grid.ColumnSpan="2" Opacity="0.3" VerticalAlignment="Bottom" Margin="10,0,0,6">
+            <Hyperlink NavigateUri="https://github.com/LavenderPixl" RequestNavigate="Hyperlink_RequestNavigate" Foreground="Black" TextDecorations="None">  
+                @LavenderPixl
+            </Hyperlink>
+        </TextBlock>
 
     </Grid>
 </Window>

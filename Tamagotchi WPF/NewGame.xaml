@@ -19,12 +19,12 @@
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="375"/>
-            <RowDefinition Height="80"/>
+            <RowDefinition Height="56"/>
         </Grid.RowDefinitions>
 
         <Image Source="Pictures/IMG_0296.png" Grid.RowSpan="5" Grid.ColumnSpan="3" Stretch="UniformToFill"/>
         <Border BorderBrush="#8DBDC8" BorderThickness="0 0 0 5" Grid.ColumnSpan="3" Grid.RowSpan="2" Background="#B1D5DD">
-            <Image Source="Pictures/IMG_0297 (1).png" />
+            <Image Source="Pictures/IMG_0297 (1).png" Stretch="UniformToFill" />
         </Border>
         <Rectangle Fill ="White" Height="375" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="3" VerticalAlignment="Top" />
         <!--Game Space-->
@@ -35,8 +35,12 @@
         </Border>
         <TextBlock Text="Ooga" TextWrapping="Wrap" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Width="339" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
 
-
-        <TextBlock Text="@LavenderPixl" Grid.Row="4" Grid.ColumnSpan="2" Opacity="0.3" VerticalAlignment="Bottom" Margin="10,0,0,6"/>
+        <!-- @ Profile -->
+        <TextBlock x:Name="Link" Grid.Row="4" Grid.ColumnSpan="2" Opacity="0.3" VerticalAlignment="Bottom" Margin="10,0,0,6">
+            <Hyperlink NavigateUri="https://github.com/LavenderPixl" RequestNavigate="Hyperlink_RequestNavigate" Foreground="Black" TextDecorations="None">  
+                @LavenderPixl
+            </Hyperlink>
+        </TextBlock>
 
     </Grid>
 </Window>
