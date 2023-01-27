@@ -21,7 +21,6 @@ namespace Tamagotchi_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        Game G = new Game();
 
         public MainWindow()
         {
@@ -31,6 +30,7 @@ namespace Tamagotchi_WPF
 
         private void btn_New_Game_Click(object sender, RoutedEventArgs e)
         {
+            Game G = new Game();
             NewGame NG = new NewGame();
             G.Show();
             this.Close();
@@ -55,7 +55,7 @@ namespace Tamagotchi_WPF
         }
         private void Window_Closed(object sender, EventArgs e)
         {
-            Application.Current.Shutdown();
+            this.Close();
         }
 
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tamagotchi_WPF
+namespace Tamagotchi_WPF.ViewModels
 {
-    class MainWindowViewModel
+    class NewGameViewModel
     {
     }
 }
