@@ -12,13 +12,14 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Tamagotchi_WPF.ViewModels;
 
 namespace Tamagotchi_WPF
 {
     /// <summary>
     /// Interaction logic for Saves.xaml
     /// </summary>
-    public partial class Saves : Window
+    public partial class Saves : UserControl
     {
         public string Navn { get; set; }
 
@@ -65,10 +66,6 @@ namespace Tamagotchi_WPF
         private void Btn_Home_Menu_Click(object sender, RoutedEventArgs e)
         {
 
-        }
-        private void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
-        {
-            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri) { UseShellExecute = true });
         }
     }
 }

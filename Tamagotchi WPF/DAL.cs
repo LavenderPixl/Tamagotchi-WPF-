@@ -36,8 +36,8 @@ namespace Tamagotchi_WPF
             {
                 new Care("Bath", 50, 0),
                 new Care("Sandbath", 50, 0),
-                new Care("Brushing", 50, 0),
-                new Care("Brushing teeth", 50, 0),
+                new Care("Brush fur", 50, 0),
+                new Care("Brush teeth", 50, 0),
                 new Care("CARE(Not Created)", 50, 0),
                 new Care("CARE(Not Created)", 50, 0)
             };

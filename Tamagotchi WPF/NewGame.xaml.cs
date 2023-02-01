@@ -12,13 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Diagnostics;
+using Tamagotchi_WPF.ViewModels;
 
 namespace Tamagotchi_WPF
 {
     /// <summary>
     /// Interaction logic for NewGame.xaml
     /// </summary>
-    public partial class NewGame : Window
+    public partial class NewGame : UserControl
     {
         public NewGame()
         {
@@ -28,12 +29,6 @@ namespace Tamagotchi_WPF
         private void Window_Closed(object sender, EventArgs e)
         {
             Application.Current.Shutdown();
-        }
-
-
-        private void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
-        {
-            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri) { UseShellExecute = true });
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tamagotchi_WPF.ViewModels
 {
-    class SavesViewModel
+    class SavesViewModel : ViewModelBase
     {
     }
 }

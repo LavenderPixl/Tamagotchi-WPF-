@@ -13,16 +13,18 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tamagotchi_WPF.ViewModels;
 
 namespace Tamagotchi_WPF
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MenuWindow : UserControl
     {
+        Game G = new Game();
 
-        public MainWindow()
+        public MenuWindow()
         {
             InitializeComponent();
         }
@@ -30,37 +32,26 @@ namespace Tamagotchi_WPF
 
         private void btn_New_Game_Click(object sender, RoutedEventArgs e)
         {
-            Game G = new Game();
-            NewGame NG = new NewGame();
-            G.Show();
-            this.Close();
+            EventAggregator.Broadcast(typeof(NewGameViewModel));
         }
 
         private void btn_Saves_Click(object sender, RoutedEventArgs e)
         {
-            Saves S = new Saves();
-            S.Show();
-            this.Close();
+            EventAggregator.Broadcast(typeof(SavesViewModel));
         }
 
         private void btn_Help_Click(object sender, RoutedEventArgs e)
         {
-            Help H = new Help();
-            H.Show();
+            EventAggregator.Broadcast(typeof(HelpViewModel));
         }
 
         private void btn_Exit_Game_Click(object sender, RoutedEventArgs e)
         {
-
+            Application.Current.Shutdown();
         }
         private void Window_Closed(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
-        {
-            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri) { UseShellExecute = true });
+            Application.Current.Shutdown();
         }
     }
 }

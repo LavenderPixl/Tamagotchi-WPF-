@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,23 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Tamagotchi_WPF.ViewModels;
 
-namespace Tamagotchi_WPF
+namespace Tamagotchi_WPF.NeedsOptions
 {
     /// <summary>
-    /// Interaction logic for Help.xaml
+    /// Interaction logic for CareOptions.xaml
     /// </summary>
-    public partial class Help : UserControl
+    public partial class CareOptions : UserControl
     {
-        public Help()
+        public CareOptions()
         {
             InitializeComponent();
         }
-        private void Btn_Home_Menu_Click(object sender, RoutedEventArgs e)
-        {
-            EventAggregator.Broadcast(typeof(MenuWindowViewModel));
-        }
-        
     }
 }

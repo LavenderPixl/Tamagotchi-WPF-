@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tamagotchi_WPF.ViewModels
 {
-    class GameViewModel : ViewModelBase
+    class QuitWindowViewModel : ViewModelBase
     {
     }
 }
