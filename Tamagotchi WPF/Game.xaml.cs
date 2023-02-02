@@ -30,10 +30,6 @@ namespace Tamagotchi_WPF
             Application.Current.Shutdown();
         }
 
-        private void Btn_Menu_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
         private void Btn_FoodDrinks_Click(object sender, RoutedEventArgs e)
         {
 
@@ -45,6 +41,11 @@ namespace Tamagotchi_WPF
         }
 
         private void Btn_Care_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_Menu_Click(object sender, RoutedEventArgs e)
         {
 
         }

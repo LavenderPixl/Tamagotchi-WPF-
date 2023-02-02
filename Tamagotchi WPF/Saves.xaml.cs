@@ -21,7 +21,7 @@ namespace Tamagotchi_WPF
     /// </summary>
     public partial class Saves : UserControl
     {
-        public string Navn { get; set; }
+        public string? Navn { get; set; }
 
         public Saves()
         {
@@ -65,7 +65,7 @@ namespace Tamagotchi_WPF
 
         private void Btn_Home_Menu_Click(object sender, RoutedEventArgs e)
         {
-
+            EventAggregator.Broadcast(typeof(MenuWindowViewModel));
         }
     }
 }

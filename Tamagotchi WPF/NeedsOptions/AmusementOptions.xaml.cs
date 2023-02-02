@@ -12,18 +12,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Tamagotchi_WPF.ViewModels;
 
 namespace Tamagotchi_WPF.NeedsOptions
 {
     /// <summary>
-    /// Interaction logic for FoodOptions.xaml
+    /// Interaction logic for AmusementOptions.xaml
     /// </summary>
-    public partial class FoodOptions : UserControl
+    public partial class AmusementOptions : UserControl
     {
-        public FoodOptions()
+        public AmusementOptions()
         {
             InitializeComponent();
+        }
+
+        private void btn_Close_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void btn_Option_1_Click(object sender, RoutedEventArgs e)
@@ -52,11 +56,6 @@ namespace Tamagotchi_WPF.NeedsOptions
         }
 
         private void btn_Option_6_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btn_Close_Click(object sender, RoutedEventArgs e)
         {
 
         }

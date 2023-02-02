@@ -24,5 +24,40 @@ namespace Tamagotchi_WPF.NeedsOptions
         {
             InitializeComponent();
         }
+
+        private void btn_Option_1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_Option_2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_Option_3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_Option_4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_Option_5_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_Option_6_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_Close_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

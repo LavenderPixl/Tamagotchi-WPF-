@@ -32,14 +32,13 @@ namespace Tamagotchi_WPF
 
         private void btn_New_Game_Click(object sender, RoutedEventArgs e)
         {
-            EventAggregator.Broadcast(typeof(NewGameViewModel));
+            EventAggregator.Broadcast(typeof(GameViewModel));
         }
 
         private void btn_Saves_Click(object sender, RoutedEventArgs e)
         {
             EventAggregator.Broadcast(typeof(SavesViewModel));
         }
-
         private void btn_Help_Click(object sender, RoutedEventArgs e)
         {
             EventAggregator.Broadcast(typeof(HelpViewModel));
@@ -53,5 +52,7 @@ namespace Tamagotchi_WPF
         {
             Application.Current.Shutdown();
         }
+
+        
     }
 }

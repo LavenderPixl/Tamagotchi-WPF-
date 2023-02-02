@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tamagotchi_WPF"
         mc:Ignorable="d"
-        Background="#BACFB3">
+        Background="#BACFB3" Height="600" Width="500">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="71"/>
@@ -17,15 +17,16 @@
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="375"/>
-            <RowDefinition Height="56"/>
+            <RowDefinition Height="55"/>
         </Grid.RowDefinitions>
 
         <Image Source="Pictures/IMG_0296.png" Grid.RowSpan="5" Grid.ColumnSpan="3" Stretch="UniformToFill"/>
         <Border BorderBrush="#8DBDC8" BorderThickness="0 0 0 5" Grid.ColumnSpan="3" Grid.RowSpan="2" Background="#B1D5DD">
             <Image Source="Pictures/IMG_0297 (1).png" Stretch="UniformToFill" />
         </Border>
-        <Rectangle Fill ="White" Height="375" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="3" VerticalAlignment="Top" />
+
         <!--Game Space-->
+        <Rectangle Fill ="White" Height="385" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="3" VerticalAlignment="Top" />
         <Border Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" BorderBrush="#8DBDC8" BorderThickness="3" Margin="10,0,9,0">
             <Rectangle x:Name="AskingBox" Fill="#B1D5DD"/>
         </Border>

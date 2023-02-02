@@ -19,45 +19,65 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="4*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
+        <!-- BUTTONS -->
+
         <Button x:Name="btn_Option_1" Click="btn_Option_1_Click" Grid.Row="2" Grid.Column="1" Height="30" Padding="0" Background="#B1D5DD" BorderBrush="#96AF8E" BorderThickness="0 0 0 3" VerticalAlignment="Top">
             <Grid>
-                <Image Source="/NeedsOptions/btn2.png" Stretch="None" />
-                <Label Content="Bind Food" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <Image Source="/Pictures/btn2.png" Stretch="UniformToFill"/>
+                <TextBlock Text="BIND FOOD" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5 0 0 0" FontSize="13"/>
+                <TextBlock Text="BIND value" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 5 0" FontSize="13"/>
             </Grid>
         </Button>
         <Button x:Name="btn_Option_2" Click="btn_Option_2_Click" Grid.Row="3" Grid.Column="1" Height="30" Padding="0" Background="#B1D5DD" BorderBrush="#96AF8E" BorderThickness="0 0 0 3" VerticalAlignment="Top">
             <Grid>
-                <Image Source="/NeedsOptions/btn2.png" Stretch="None" />
-                <Label Content="Bind Food" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <Image Source="/Pictures/btn2.png" Stretch="UniformToFill"/>
+                <TextBlock Text="BIND FOOD" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5 0 0 0" FontSize="13"/>
+                <TextBlock Text="BIND value" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 5 0" FontSize="13"/>
             </Grid>
         </Button>
         <Button x:Name="btn_Option_3" Click="btn_Option_3_Click" Grid.Row="4" Grid.Column="1" Height="30" Padding="0" Background="#B1D5DD" BorderBrush="#96AF8E" BorderThickness="0 0 0 3" VerticalAlignment="Top">
             <Grid>
-                <Image Source="/NeedsOptions/btn2.png" Stretch="None" />
-                <Label Content="Bind Food" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <Image Source="/Pictures/btn2.png" Stretch="UniformToFill"/>
+                <TextBlock Text="BIND FOOD" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5 0 0 0" FontSize="13"/>
+                <TextBlock Text="BIND value" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 5 0" FontSize="13"/>
             </Grid>
         </Button>
         <Button x:Name="btn_Option_4" Click="btn_Option_4_Click" Grid.Row="5" Grid.Column="1" Height="30" Padding="0" Background="#B1D5DD" BorderBrush="#96AF8E" BorderThickness="0 0 0 3" VerticalAlignment="Top">
             <Grid>
-                <Image Source="/NeedsOptions/btn2.png" Stretch="None" />
-                <Label Content="Bind Food" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <Image Source="/Pictures/btn2.png" Stretch="UniformToFill"/>
+                <TextBlock Text="BIND FOOD" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5 0 0 0" FontSize="13"/>
+                <TextBlock Text="BIND value" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 5 0" FontSize="13"/>
             </Grid>
         </Button>
         <Button x:Name="btn_Option_5" Click="btn_Option_5_Click" Grid.Row="6" Grid.Column="1" Height="30" Padding="0" Background="#B1D5DD" BorderBrush="#96AF8E" BorderThickness="0 0 0 3" VerticalAlignment="Top">
             <Grid>
-                <Image Source="/NeedsOptions/btn2.png" Stretch="None" />
-                <Label Content="Bind Food" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <Image Source="/Pictures/btn2.png" Stretch="UniformToFill"/>
+                <TextBlock Text="BIND FOOD" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5 0 0 0" FontSize="13"/>
+                <TextBlock Text="BIND value" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 5 0" FontSize="13"/>
             </Grid>
         </Button>
         <Button x:Name="btn_Option_6" Click="btn_Option_6_Click" Grid.Row="7" Grid.Column="1" Height="30" Padding="0" Background="#B1D5DD" BorderBrush="#96AF8E" BorderThickness="0 0 0 3" VerticalAlignment="Top">
             <Grid>
-                <Image Source="/NeedsOptions/btn2.png" Stretch="None" />
-                <Label Content="Bind Food" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                <Image Source="/Pictures/btn2.png" Stretch="UniformToFill"/>
+                <TextBlock Text="BIND FOOD" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5 0 0 0" FontSize="13"/>
+                <TextBlock Text="BIND value" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 5 0" FontSize="13"/>
             </Grid>
         </Button>
+
+        <!-- TEXT -->
+        <TextBlock Text="Available Food" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" FontSize="14"/>
+
+        <!-- CLOSE -->
+        <Button x:Name="btn_Close"  VerticalAlignment="Top" HorizontalAlignment="Right" Padding="0" FontSize="16" Grid.Column="2" Height="30" Width="30" Background="#B1D5DD" BorderBrush="#96AF8E" BorderThickness="0 0 0 4" Click="btn_Close_Click">
+            <Grid>
+                <Image Source="/Pictures/btn2.png" Stretch="UniformToFill"/>
+                <Label Content="X" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+            </Grid>
+        </Button>
+        
     </Grid>
 </UserControl>

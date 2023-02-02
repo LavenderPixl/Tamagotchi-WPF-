@@ -12,7 +12,6 @@
     <None Remove="btn2.png" />
     <None Remove="IMG_0296.png" />
     <None Remove="IMG_0297 %281%29.png" />
-    <None Remove="NeedsOptions\btn2.png" />
     <None Remove="Pictures\Menu.png" />
     <None Remove="Tree.png" />
   </ItemGroup>
@@ -22,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="NeedsOptions\btn2.png" />
     <Resource Include="Pictures\btn2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
