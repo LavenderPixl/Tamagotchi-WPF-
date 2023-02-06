@@ -19,11 +19,14 @@ namespace Tamagotchi_WPF.NeedsOptions
     /// <summary>
     /// Interaction logic for FoodOptions.xaml
     /// </summary>
-    public partial class FoodOptions : UserControl
+    public partial class FoodOptions : Window
     {
+        public Game GM { get; set; }
+        readonly FoodOptionsViewModel VM = new();
         public FoodOptions()
         {
             InitializeComponent();
+            this.DataContext = VM;
         }
 
         private void btn_Option_1_Click(object sender, RoutedEventArgs e)
@@ -58,7 +61,17 @@ namespace Tamagotchi_WPF.NeedsOptions
 
         private void btn_Close_Click(object sender, RoutedEventArgs e)
         {
+            GM.Overlay.Visibility = Visibility.Collapsed;
+            GM.Overlay.IsHitTestVisible = false;
+            this.Close();
+        }
 
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
         }
     }
 }

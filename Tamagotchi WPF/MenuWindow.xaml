@@ -52,12 +52,5 @@
                 <Label Content="Exit Game" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
             </Grid>
         </Button>
-
-        <Button x:Name="Btn_Menu" Width="29" Height="33" Margin="0 10 25 0" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top" BorderThickness="0 0 0 2" BorderBrush="#8DBDC8">
-            <Image Source="Pictures/Menu.Png" Width="20" SnapsToDevicePixels="True"/>
-            <!--ICON: https://www.flaticon.com/authors/pixel-perfect-->
-        </Button>
-
-
     </Grid>
 </UserControl>

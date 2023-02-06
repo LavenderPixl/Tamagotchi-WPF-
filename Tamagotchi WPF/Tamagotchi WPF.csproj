@@ -12,6 +12,10 @@
     <None Remove="btn2.png" />
     <None Remove="IMG_0296.png" />
     <None Remove="IMG_0297 %281%29.png" />
+    <None Remove="Pictures\Amusement.png" />
+    <None Remove="Pictures\Bone.png" />
+    <None Remove="Pictures\Bone2.png" />
+    <None Remove="Pictures\Care.png" />
     <None Remove="Pictures\Menu.png" />
     <None Remove="Tree.png" />
   </ItemGroup>
@@ -21,7 +25,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Pictures\Amusement.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Bone.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Pictures\btn2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Care.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Pictures\IMG_0296.png">

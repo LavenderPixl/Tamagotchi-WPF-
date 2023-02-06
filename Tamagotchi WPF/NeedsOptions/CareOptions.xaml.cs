@@ -12,17 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tamagotchi_WPF.ViewModels;
 
 namespace Tamagotchi_WPF.NeedsOptions
 {
     /// <summary>
     /// Interaction logic for CareOptions.xaml
     /// </summary>
-    public partial class CareOptions : UserControl
+    public partial class CareOptions : Window
     {
+        public Game GM { get; set; }
+        readonly CareOptionsViewModel VM = new();
         public CareOptions()
         {
             InitializeComponent();
+            this.DataContext = VM;
         }
 
         private void btn_Option_1_Click(object sender, RoutedEventArgs e)
@@ -57,7 +61,17 @@ namespace Tamagotchi_WPF.NeedsOptions
 
         private void btn_Close_Click(object sender, RoutedEventArgs e)
         {
+            GM.Overlay.Visibility = Visibility.Collapsed;
+            GM.Overlay.IsHitTestVisible = false;
+            this.Close();
+        }
 
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
         }
     }
 }

@@ -12,23 +12,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tamagotchi_WPF.ViewModels;
 
 namespace Tamagotchi_WPF.NeedsOptions
 {
     /// <summary>
     /// Interaction logic for AmusementOptions.xaml
     /// </summary>
-    public partial class AmusementOptions : UserControl
+    public partial class AmusementOptions : Window
     {
+        public Game GM { get; set; }
+        readonly AmusementOptionsViewModel VM = new();
         public AmusementOptions()
         {
             InitializeComponent();
+            this.DataContext = VM;
         }
 
-        private void btn_Close_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void btn_Option_1_Click(object sender, RoutedEventArgs e)
         {
@@ -58,6 +58,20 @@ namespace Tamagotchi_WPF.NeedsOptions
         private void btn_Option_6_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+        private void btn_Close_Click(object sender, RoutedEventArgs e)
+        {
+            GM.Overlay.Visibility = Visibility.Collapsed;
+            GM.Overlay.IsHitTestVisible = false;
+            this.Close();
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
         }
     }
 }

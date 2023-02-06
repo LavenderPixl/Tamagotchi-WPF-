@@ -42,7 +42,7 @@
             </StackPanel>
 
             <!-- HOME MENU -->
-            <Button x:Name="Btn_Home_Menu" Click="Btn_Home_Menu_Click" Height="35" Width="100" Padding="0" Margin="0 0 0 0"  BorderBrush="#96AF8E" BorderThickness="0 0 0 3" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Button x:Name="Btn_Home_Menu" Click="Btn_Home_Menu_Click" Height="35" Width="100" Padding="0" Margin="0 0 10 10"  BorderBrush="#96AF8E" BorderThickness="0 0 0 3" HorizontalAlignment="Right" VerticalAlignment="Bottom">
                 <Grid>
                     <Image Source="Pictures/btn2.png" Stretch="UniformToFill" />
                     <Label Content="Home Menu" HorizontalAlignment="Center" VerticalAlignment="Center"/>

@@ -8,7 +8,7 @@
         xmlns:g="clr-namespace:Tamagotchi_WPF.NeedsOptions"
         xmlns:gif="http://wpfanimatedgif.codeplex.com/"
         mc:Ignorable="d"
-        Title="Tamagotchi" Height="640" Width="500"
+        Title="Tamagotchi" Height="640" Width="515"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize"
         Closed="Window_Closed">
@@ -27,15 +27,6 @@
         </DataTemplate>
         <DataTemplate DataType="{x:Type f:GameViewModel}">
             <local:Game/>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type f:FoodOptionsViewModel}">
-            <g:FoodOptions/>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type f:CareOptionsViewModel}">
-            <g:CareOptions/>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type f:AmusementOptionsViewModel}">
-            <g:AmusementOptions/>
         </DataTemplate>
     </Window.Resources>
     <Grid>

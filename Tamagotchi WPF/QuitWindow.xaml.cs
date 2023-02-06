@@ -12,14 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tamagotchi_WPF.ViewModels;
 
 namespace Tamagotchi_WPF
 {
     /// <summary>
     /// Interaction logic for QuitWindow.xaml
     /// </summary>
-    public partial class QuitWindow : UserControl
+    public partial class QuitWindow : Window
     {
+        public Game GM { get; set; }
         public QuitWindow()
         {
             InitializeComponent();
@@ -42,7 +44,17 @@ namespace Tamagotchi_WPF
 
         private void btn_Close_Click(object sender, RoutedEventArgs e)
         {
+            GM.Overlay.Visibility = Visibility.Collapsed;
+            GM.Overlay.IsHitTestVisible = false;
+            this.Close();
+        }
 
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
         }
     }
 }

@@ -107,5 +107,6 @@
                 </Grid>
             </Button>
         </Grid>
+        <Rectangle x:Name="Overlay" Fill="White" Opacity="0.3" Grid.RowSpan="3" Grid.ColumnSpan="3" Visibility="Collapsed"/>
     </Grid>
 </UserControl>
