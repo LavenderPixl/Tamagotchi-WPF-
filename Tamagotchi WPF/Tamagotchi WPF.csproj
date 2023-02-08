@@ -52,13 +52,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Tama\Mantaray\" />
-    <Folder Include="Tama\Snake\" />
-    <Folder Include="Tama\Teddy\" />
+    <Folder Include="TamaIMG\Mantaray\" />
+    <Folder Include="TamaIMG\Snake\" />
+    <Folder Include="TamaIMG\Teddy\" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Tama\Bunny\Bunny.png">
+    <None Update="TamaIMG\Bunny\Base.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

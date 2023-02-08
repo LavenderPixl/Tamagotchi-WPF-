@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tamagotchi_WPF"
         mc:Ignorable="d"
-        Background="#BACFB3" Height="600" Width="500">
+        Background="#BACFB3" Height="600" Width="500"
+             >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="71"/>
@@ -24,12 +25,23 @@
         <Border BorderBrush="#8DBDC8" BorderThickness="0 0 0 5" Grid.ColumnSpan="3" Grid.RowSpan="2" Background="#B1D5DD">
             <Image Source="Pictures/IMG_0297 (1).png" Stretch="UniformToFill" />
         </Border>
-
+        <Button Content="111" Opacity="0"/>
+        
         <!--Game Space-->
         <Rectangle Fill ="White" Height="385" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="3" VerticalAlignment="Top" />
         <Border Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" BorderBrush="#8DBDC8" BorderThickness="3" Margin="10,0,9,0">
             <Rectangle x:Name="AskingBox" Fill="#B1D5DD"/>
         </Border>
-        <TextBlock Text="Ooga" TextWrapping="Wrap" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Width="339" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+        
+        <!-- Text Block + Button -->
+        <TextBlock x:Name="Notification"  Text="You've found an Egg!" TextWrapping="Wrap" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Width="339" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+
+        <Button x:Name="btn_Next"  Width="150" Height="30" Padding="0" Click="btn_Next_Click" Grid.Column="1" Grid.Row="3" VerticalAlignment="Bottom" Margin="0 0 0 15" BorderBrush="#8DBDC8" BorderThickness="0 0 0 3">
+            <Grid>
+                <Image Source="Pictures/btn2.png" Stretch="UniformToFill" />
+                <TextBlock Text="Next" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Grid>
+        </Button>
+
     </Grid>
 </UserControl>

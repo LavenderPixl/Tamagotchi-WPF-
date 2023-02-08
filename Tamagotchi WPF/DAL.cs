@@ -22,20 +22,17 @@ namespace Tamagotchi_WPF
 
         public DAL()
         {
-
             FoodDataBase = new ObservableCollection<Food>
             {
                 new Food("Dumplings", 50, 0),
                 new Food("Sandwich", 50, 0),
                 new Food("Sushi", 50, 0),
-                new Food("Salad", 50, 0),
-                new Food("Chips", 50, 0),
-                new Food("Cookies", 50, 0)
+                new Food("Salad", 40, 0),
+                new Food("Chips", 20, 0),
+                new Food("Cookies", 10, 0)
             };
             FoodData = new();
 
-
-            //Copy for Care && Amusement
             CareDataBase = new ObservableCollection<Care>
             {
                 new Care("Bath", 50, 0),
@@ -46,6 +43,7 @@ namespace Tamagotchi_WPF
                 new Care("CARE(Not Created)", 50, 0)
             };
             CareData = new();
+
             AmusementDataBase = new ObservableCollection<Amusement>
             {
                 new Amusement("Bouncy ball", 50, 0),
@@ -56,6 +54,14 @@ namespace Tamagotchi_WPF
                 new Amusement("Roughouse", 50, 0)
             };
             AmusementData = new();
+
+            string[] CreatureTypes =
+            {
+                "Bunny",
+                "Mantaray",
+                "Snake",
+                "Teddy"
+            };
 
         }
 
@@ -86,8 +92,5 @@ namespace Tamagotchi_WPF
             }
             return AmusementData;
         }
-
-
-        
     }
 }

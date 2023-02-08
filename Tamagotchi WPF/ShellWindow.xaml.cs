@@ -23,6 +23,7 @@ namespace Tamagotchi_WPF
     /// </summary>
     public partial class ShellWindow : Window
     {
+        
         public ShellWindow()
         {
             InitializeComponent();

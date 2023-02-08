@@ -21,9 +21,35 @@ namespace Tamagotchi_WPF
     /// </summary>
     public partial class NewGame : UserControl
     {
+        DAL dal;
+        NewGameViewModel VM = new();
         public NewGame()
         {
             InitializeComponent();
+            this.DataContext= VM;
+
+
+        }
+
+        private void Notification_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void btn_Next_Click(object sender, RoutedEventArgs e)
+        {
+            int Counter = 0;
+            if (sender is Button b)
+            {
+                Counter++;
+                Notification.Text = "Your Egg is starting to shake! Is it hatching?";
+                if (Counter >= 2)
+                {
+                    Notification.Text = $"Congratulations, it's a ";
+
+                }
+            }
         }
     }
 }
+//

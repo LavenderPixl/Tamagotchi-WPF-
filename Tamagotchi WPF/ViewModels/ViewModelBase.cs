@@ -10,6 +10,9 @@ namespace Tamagotchi_WPF.ViewModels
 {
     public class ViewModelBase : INotifyPropertyChanged
     {
+        public DAL dal = new DAL();
+
+
         public event PropertyChangedEventHandler? PropertyChanged;
 
         public void OnPropertyChanged([CallerMemberName] string propertyName = null)
