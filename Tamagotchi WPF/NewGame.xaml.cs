@@ -21,35 +21,39 @@ namespace Tamagotchi_WPF
     /// </summary>
     public partial class NewGame : UserControl
     {
-        DAL dal;
         NewGameViewModel VM = new();
+        int Counter = 0;
+
+
         public NewGame()
         {
             InitializeComponent();
-            this.DataContext= VM;
-
-
-        }
-
-        private void Notification_PreviewKeyDown(object sender, KeyEventArgs e)
-        {
-
+            this.DataContext = VM;
         }
 
         private void btn_Next_Click(object sender, RoutedEventArgs e)
         {
-            int Counter = 0;
             if (sender is Button b)
             {
                 Counter++;
                 Notification.Text = "Your Egg is starting to shake! Is it hatching?";
                 if (Counter >= 2)
                 {
-                    Notification.Text = $"Congratulations, it's a ";
+                    Notification.Text = $"Congratulations, it's a {VM.dal.CreatureTypes[VM.tamaTypeRND]} creature!";
+                    if (Counter >= 3)
+                    {
+                        Notification.Text = "Please name your Tama:";
+                        Box_Naming.Visibility = Visibility.Visible;
+                    }
 
+                }
+                if (Box_Naming.Text != "") //Checks if user has typed a name - If so; The name is sent to the Viewmodel, into tamaName. Then Displays Game (GAME STARTS)
+                {
+                    VM.yourTama.Name = Box_Naming.Text;
+                    EventAggregator.Broadcast(typeof(GameViewModel));
                 }
             }
         }
+
     }
 }
-//

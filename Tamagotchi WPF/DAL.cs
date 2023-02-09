@@ -54,16 +54,15 @@ namespace Tamagotchi_WPF
                 new Amusement("Roughouse", 50, 0)
             };
             AmusementData = new();
+        }
 
-            string[] CreatureTypes =
+        public string[] CreatureTypes =
             {
                 "Bunny",
                 "Mantaray",
                 "Snake",
                 "Teddy"
             };
-
-        }
 
         public ObservableCollection<Food> GetFood()
         {

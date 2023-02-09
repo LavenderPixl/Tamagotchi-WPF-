@@ -24,18 +24,17 @@ namespace Tamagotchi_WPF
     {
         Game G = new Game();
         DAL dal;
+
         public MenuWindow()
         {
             InitializeComponent();
             dal = new DAL();
         }
 
-
         private void btn_New_Game_Click(object sender, RoutedEventArgs e)
         {
             EventAggregator.Broadcast(typeof(NewGameViewModel));
         }
-
         private void btn_Saves_Click(object sender, RoutedEventArgs e)
         {
             EventAggregator.Broadcast(typeof(SavesViewModel));
@@ -44,7 +43,6 @@ namespace Tamagotchi_WPF
         {
             EventAggregator.Broadcast(typeof(HelpViewModel));
         }
-
         private void btn_Exit_Game_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
@@ -53,7 +51,5 @@ namespace Tamagotchi_WPF
         {
             Application.Current.Shutdown();
         }
-
-        
     }
 }

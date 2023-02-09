@@ -10,9 +10,39 @@ namespace Tamagotchi_WPF.ViewModels
 {
     public class NewGameViewModel : ViewModelBase
     {
-        Tama tama = new Tama ("Baby Egg", 1, 0, 100, 100, 100, 100, "ImgPath", "");
-        
-        DAL dal =
+        DAL dal = new DAL();
+        public int tamaTypeRND { get; set; }
+        //public string tamaName
+        //{
+        //    get
+        //    {
+        //        return GameState.Instance.PlayerTama.Name;
+        //    }
+        //}
+        public Tama yourTama
+        {
+            get
+            {
+                return GameState.Instance.PlayerTama;
+            }
+        }
 
+        public NewGameViewModel()
+        {
+            RandomCreatureType();
+            CreateTama();
+        }
+
+        public int RandomCreatureType()
+        {
+            Random rnd = new Random();
+            tamaTypeRND = rnd.Next(0, 4);
+            return tamaTypeRND;
+        }
+        public void CreateTama()
+        {
+            GameState.Instance.PlayerTama = new Tama("Baby Egg", 1, 0, 100, 100, 100, 100,
+            $"../../../TamaIMG/{dal.CreatureTypes[tamaTypeRND]}/Idle.gif", dal.CreatureTypes[tamaTypeRND].ToString());
+        }
     }
 }

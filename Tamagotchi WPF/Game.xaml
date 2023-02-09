@@ -22,7 +22,7 @@
 
         <Grid Grid.ColumnSpan="3" Grid.Row="0">
 
-            <!--Box with Info inside-->
+            <!--Top Info box (back and front)-->
             <Grid.RowDefinitions>
                 <RowDefinition Height="62"/>
                 <RowDefinition Height="55"/>
@@ -43,11 +43,14 @@
                 </Border>
             </StackPanel>
 
-            <!-- Text in Box -->
+            <!-- Text in Top Info Box -->
             <Grid Width="317" Height="64" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="22 0 0 0" Grid.RowSpan="2">
-                <StackPanel VerticalAlignment="Center" >
-                    <TextBlock Text="Lvl." Padding="10 0 0 0" />
-                    <TextBlock Text="Name" Padding="10 0 0 0" />
+                <StackPanel VerticalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Lvl." Padding="10 0 0 0" />
+                        <TextBlock Text="{Binding TamaLevel}" Padding="3 0 0 0" />
+                    </StackPanel>
+                    <TextBlock Text="{Binding TamaName}" Padding="10 0 0 0" />
                 </StackPanel>
             </Grid>
 

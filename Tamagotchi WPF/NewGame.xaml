@@ -25,14 +25,20 @@
         <Border BorderBrush="#8DBDC8" BorderThickness="0 0 0 5" Grid.ColumnSpan="3" Grid.RowSpan="2" Background="#B1D5DD">
             <Image Source="Pictures/IMG_0297 (1).png" Stretch="UniformToFill" />
         </Border>
-        <Button Content="111" Opacity="0"/>
-        
+
         <!--Game Space-->
         <Rectangle Fill ="White" Height="385" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="3" VerticalAlignment="Top" />
+        <Grid Grid.Row="3" Grid.Column="1" Height="320" VerticalAlignment="Top">
+            <Image x:Name="TamaGIF" Source="/Pictures/Tree.png"/>
+        </Grid>
+        
         <Border Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" BorderBrush="#8DBDC8" BorderThickness="3" Margin="10,0,9,0">
             <Rectangle x:Name="AskingBox" Fill="#B1D5DD"/>
         </Border>
-        
+
+        <!-- Naming Box -->
+        <TextBox x:Name="Box_Naming" Height="20" Width="160" Grid.Row="2" Grid.Column="1" Visibility="Hidden"/>
+
         <!-- Text Block + Button -->
         <TextBlock x:Name="Notification"  Text="You've found an Egg!" TextWrapping="Wrap" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Width="339" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
 
