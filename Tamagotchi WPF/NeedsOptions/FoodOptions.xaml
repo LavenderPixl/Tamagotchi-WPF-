@@ -33,7 +33,7 @@
             <ItemsControl ItemsSource="{Binding VM_FoodDataBase}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Button x:Name="btn_Option_1" Click="btn_Option_1_Click" Height="33" Padding="0" BorderBrush="#96AF8E" BorderThickness="0 0 0 3" VerticalAlignment="Top" Margin="0 0 0 4">
+                        <Button x:Name="btn_EatFood" Height="33" Padding="0" BorderBrush="#96AF8E" BorderThickness="0 0 0 3" VerticalAlignment="Top" Margin="0 0 0 4" Click="btn_EatFood_Click">
                             <Grid>
                                 <Image Source="/Pictures/btn2.png" Stretch="UniformToFill"/>
                                 <TextBlock Text="{Binding Name}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5 0 0 0" FontSize="13"/>

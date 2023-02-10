@@ -24,34 +24,34 @@ namespace Tamagotchi_WPF
         {
             FoodDataBase = new ObservableCollection<Food>
             {
-                new Food("Dumplings", 50, 0),
-                new Food("Sandwich", 50, 0),
-                new Food("Sushi", 50, 0),
-                new Food("Salad", 40, 0),
-                new Food("Chips", 20, 0),
-                new Food("Cookies", 10, 0)
+                new Food("Dumplings", 50, 10),
+                new Food("Sandwich", 50, 10),
+                new Food("Sushi", 50, 10),
+                new Food("Salad", 40, 10),
+                new Food("Chips", 20, 10),
+                new Food("Cookies", 10, 10)
             };
             FoodData = new();
 
             CareDataBase = new ObservableCollection<Care>
             {
-                new Care("Bath", 50, 0),
-                new Care("Sandbath", 50, 0),
-                new Care("Brush fur", 50, 0),
-                new Care("Brush teeth", 50, 0),
-                new Care("CARE(Not Created)", 50, 0),
-                new Care("CARE(Not Created)", 50, 0)
+                new Care("Bath", 50, 10),
+                new Care("Sandbath", 50, 10),
+                new Care("Brush fur", 50, 10),
+                new Care("Brush teeth", 50, 10),
+                new Care("CARE(Not Created)", 50, 10),
+                new Care("CARE(Not Created)", 50, 10)
             };
             CareData = new();
 
             AmusementDataBase = new ObservableCollection<Amusement>
             {
-                new Amusement("Bouncy ball", 50, 0),
-                new Amusement("Music", 50, 0),
-                new Amusement("Teddybear", 50, 0),
-                new Amusement("Chewy toy", 50, 0),
-                new Amusement("Hide and Seek", 50, 0),
-                new Amusement("Roughouse", 50, 0)
+                new Amusement("Bouncy ball", 50, 10),
+                new Amusement("Music", 50, 10),
+                new Amusement("Teddybear", 50, 10),
+                new Amusement("Chewy toy", 50, 10),
+                new Amusement("Hide and Seek", 50, 10),
+                new Amusement("Roughouse", 50, 10)
             };
             AmusementData = new();
         }

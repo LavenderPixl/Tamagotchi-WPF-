@@ -48,9 +48,9 @@
                 <StackPanel VerticalAlignment="Center">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Lvl." Padding="10 0 0 0" />
-                        <TextBlock Text="{Binding TamaLevel}" Padding="3 0 0 0" />
+                        <TextBlock Text="{Binding tamaLevel}" Padding="3 0 0 0" />
                     </StackPanel>
-                    <TextBlock Text="{Binding TamaName}" Padding="10 0 0 0" />
+                    <TextBlock Text="{Binding tamaName}" Padding="10 0 0 0" />
                 </StackPanel>
             </Grid>
 

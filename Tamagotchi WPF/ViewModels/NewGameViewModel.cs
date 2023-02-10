@@ -12,13 +12,7 @@ namespace Tamagotchi_WPF.ViewModels
     {
         DAL dal = new DAL();
         public int tamaTypeRND { get; set; }
-        //public string tamaName
-        //{
-        //    get
-        //    {
-        //        return GameState.Instance.PlayerTama.Name;
-        //    }
-        //}
+
         public Tama yourTama
         {
             get
