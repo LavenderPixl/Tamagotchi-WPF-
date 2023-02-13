@@ -29,7 +29,6 @@ namespace Tamagotchi_WPF
         {
             InitializeComponent();
             this.DataContext = VM;
-
         }
         private void Btn_FoodDrinks_Click(object sender, RoutedEventArgs e)
         {

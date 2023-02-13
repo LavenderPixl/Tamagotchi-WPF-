@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tamagotchi_WPF.Objects;
 using Tamagotchi_WPF.ViewModels;
 
 namespace Tamagotchi_WPF.NeedsOptions
@@ -28,42 +29,33 @@ namespace Tamagotchi_WPF.NeedsOptions
             InitializeComponent();
             this.DataContext = VM;
         }
-
-
-        private void btn_Option_1_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btn_Option_2_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btn_Option_3_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btn_Option_4_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btn_Option_5_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btn_Option_6_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void btn_Close_Click(object sender, RoutedEventArgs e)
+        public void CloseWindow()
         {
             GM.Overlay.Visibility = Visibility.Collapsed;
             GM.Overlay.IsHitTestVisible = false;
             this.Close();
+        }
+
+        private void btn_Amusement_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button b)
+            {
+                if (b != null)
+                {
+                    Amusement o = (Amusement)b.DataContext;
+                    if (o != null)
+                    {
+                        VM.PlayAmusement(o.ExperiencePoints);
+                        CloseWindow();
+                    }
+                }
+            }
+        }
+
+
+        private void btn_Close_Click(object sender, RoutedEventArgs e)
+        {
+            CloseWindow();
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -73,5 +65,6 @@ namespace Tamagotchi_WPF.NeedsOptions
                 this.DragMove();
             }
         }
+
     }
 }

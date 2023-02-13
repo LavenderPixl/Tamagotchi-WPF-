@@ -58,6 +58,5 @@ namespace Tamagotchi_WPF.NeedsOptions
                 this.DragMove();
             }
         }
-
     }
 }

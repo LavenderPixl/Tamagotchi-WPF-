@@ -16,5 +16,9 @@ namespace Tamagotchi_WPF.ViewModels
         {
             VM_AmusementDataBase = dal.GetAmusement();
         }
+        public void PlayAmusement(int XP)
+        {
+            GameState.Instance.PlayerTama.XP += XP;
+        }
     }
 }

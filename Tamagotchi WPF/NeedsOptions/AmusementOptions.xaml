@@ -32,7 +32,7 @@
             <ItemsControl ItemsSource="{Binding VM_AmusementDataBase}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Button x:Name="btn_Option_1" Click="btn_Option_1_Click" Height="30" Padding="0" BorderBrush="#96AF8E" BorderThickness="0 0 0 3" VerticalAlignment="Top" Margin="0 0 0 4">
+                        <Button x:Name="btn_Amusement" Click="btn_Amusement_Click" Height="30" Padding="0" BorderBrush="#96AF8E" BorderThickness="0 0 0 3" VerticalAlignment="Top" Margin="0 0 0 4">
                             <Grid>
                                 <Image Source="/Pictures/btn2.png" Stretch="UniformToFill"/>
                                 <TextBlock Text="{Binding Name}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5 0 0 0" FontSize="13"/>

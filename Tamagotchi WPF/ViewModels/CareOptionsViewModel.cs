@@ -12,10 +12,13 @@ namespace Tamagotchi_WPF.ViewModels
     {
         DAL dal = new DAL();
         public ObservableCollection<Care> VM_CareDataBase { get; set; }
-        
         public CareOptionsViewModel()
         {
             VM_CareDataBase = dal.GetCare();
+        }
+        public void PlayCare(int XP)
+        {
+            GameState.Instance.PlayerTama.XP += XP;
         }
     }
 }

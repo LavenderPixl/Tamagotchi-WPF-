@@ -31,11 +31,14 @@ namespace Tamagotchi_WPF.ViewModels
             }
         }
 
+        public void CheckXP()
+        {
 
-
-
-
-
+            if (tamaXP >= maxXP)
+            {
+                LevelUp();
+            }
+        }
 
         public GameViewModel()
         {
@@ -45,16 +48,10 @@ namespace Tamagotchi_WPF.ViewModels
                 tamaLevel = GameState.Instance.PlayerTama.Level;
                 tamaXP = GameState.Instance.PlayerTama.XP;
             }
-
-            if (tamaXP >= maxXP)
-            {
-                LevelUp();
-            }
+            
+            
 
         }
-
-
-
 
     }
 }
