@@ -10,7 +10,6 @@ namespace Tamagotchi_WPF.ViewModels
 {
     class CareOptionsViewModel : ViewModelBase
     {
-        DAL dal = new DAL();
         public ObservableCollection<Care> VM_CareDataBase { get; set; }
         public CareOptionsViewModel()
         {

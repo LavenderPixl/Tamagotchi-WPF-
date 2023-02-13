@@ -10,20 +10,58 @@ namespace Tamagotchi_WPF.ViewModels
 {
     public class GameViewModel : ViewModelBase
     {
-        public string tamaName { get; set; }
-        public int tamaLevel { get; set; }
-        public int tamaXP { get; set; }
+        private Tama _tama;
 
-        public int maxXP = 100;
-        public float multiplier = 1.25f;
+        public string TamaName 
+        { 
+            get => _tama.Name;
+            set
+            {
+                _tama.Name = value;
+                OnPropertyChanged(nameof(TamaName));
+            } 
+        }
+
+        public int TamaLevel 
+        { 
+            get => _tama.Level;
+            set
+            {
+                _tama.Level = value;
+                OnPropertyChanged(nameof(TamaLevel));
+            } 
+        }
+        public int TamaXP 
+        {
+            get => _tama.XP;
+            set
+            {
+                _tama.XP = value;
+                CheckXP();
+                OnPropertyChanged(nameof(TamaXP));
+            }
+        }
+
+        private int _maxXP;
+        public int MaxXP
+        {
+            get => _maxXP;
+            set
+            {
+                _maxXP = value;
+                OnPropertyChanged(nameof(MaxXP));
+            }
+        }
+
+        private const float Multiplier = 1.25f;
 
         public void LevelUp()
         {
             try
             {
-                tamaLevel++;
-                tamaXP = 0;
-                maxXP = Convert.ToInt32(Math.Round(maxXP * multiplier));
+                TamaLevel++;
+                TamaXP = 0;
+                MaxXP = Convert.ToInt32(Math.Round(MaxXP * Multiplier));
             }
             catch (Exception)
             {
@@ -34,7 +72,7 @@ namespace Tamagotchi_WPF.ViewModels
         public void CheckXP()
         {
 
-            if (tamaXP >= maxXP)
+            if (TamaXP >= MaxXP)
             {
                 LevelUp();
             }
@@ -42,15 +80,20 @@ namespace Tamagotchi_WPF.ViewModels
 
         public GameViewModel()
         {
-            if (GameState.Instance.PlayerTama != null)
-            {
-                tamaName = GameState.Instance.PlayerTama.Name;
-                tamaLevel = GameState.Instance.PlayerTama.Level;
-                tamaXP = GameState.Instance.PlayerTama.XP;
-            }
-            
-            
+            EventAggregator.OnTransmittedTama += OnTransmittedTama;
+            EventAggregator.OnUpdateTama += OnUpdateTama;
+            _maxXP = 100;
+        }
 
+        private void OnTransmittedTama(Tama tama)
+        {
+            _tama = tama;
+        }
+
+        private void OnUpdateTama(object value, string propertyName)
+        {
+            if (propertyName == nameof(TamaXP))
+                TamaXP += (int)value;
         }
 
     }

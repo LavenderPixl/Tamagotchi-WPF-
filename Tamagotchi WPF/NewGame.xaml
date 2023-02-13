@@ -5,8 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tamagotchi_WPF"
         mc:Ignorable="d"
-        Background="#BACFB3" Height="600" Width="500"
-             >
+        Background="#BACFB3" Height="600" Width="500">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="71"/>
@@ -37,7 +36,8 @@
         </Border>
 
         <!-- Naming Box -->
-        <TextBox x:Name="Box_Naming" Height="20" Width="160" Grid.Row="2" Grid.Column="1" Visibility="Hidden"/>
+        <TextBox x:Name="Box_Naming" Height="20" Width="160" Grid.Row="2" Grid.Column="1" Visibility="Hidden"
+                 Text="{Binding TamaName}"/>
 
         <!-- Text Block + Button -->
         <TextBlock x:Name="Notification"  Text="You've found an Egg!" TextWrapping="Wrap" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Width="339" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>

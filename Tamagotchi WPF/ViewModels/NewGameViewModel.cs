@@ -10,33 +10,53 @@ namespace Tamagotchi_WPF.ViewModels
 {
     public class NewGameViewModel : ViewModelBase
     {
-        DAL dal = new DAL();
-        public int tamaTypeRND { get; set; }
+        public int TamaType { get; set; }
 
-        public Tama yourTama
-        {
-            get
-            {
-                return GameState.Instance.PlayerTama;
-            }
-        }
+        public string TamaName { get; set; }
+
+        public string NotificationText { get; set;}
+
+        private Tama _newTama;
+
+        private string GetCreatureType() => dal.CreatureTypes[TamaType];
 
         public NewGameViewModel()
         {
             RandomCreatureType();
-            CreateTama();
         }
 
-        public int RandomCreatureType()
+        public void RandomCreatureType()
         {
             Random rnd = new Random();
-            tamaTypeRND = rnd.Next(0, 4);
-            return tamaTypeRND;
+            TamaType = rnd.Next(0, 4);
         }
-        public void CreateTama()
+
+        public string GetNotificationText(int counter)
         {
-            GameState.Instance.PlayerTama = new Tama("Baby Egg", 1, 0, 100, 100, 100, 100,
-            $"../../../TamaIMG/{dal.CreatureTypes[tamaTypeRND]}/Idle.gif", dal.CreatureTypes[tamaTypeRND].ToString());
+            switch (counter)
+            {
+                case 1:
+                    return "Your Egg is starting to shake! Is it hatching?";
+                case 2:
+                    return $"Congratulations, it's a {GetCreatureType()} creature!";
+                case >=3:
+                    return "Please name your Tama";
+                default:
+                    return "";
+            }
+        }
+
+        public void StartGame()
+        {
+            CreateTama();
+            EventAggregator.Broadcast(typeof(GameViewModel));
+            EventAggregator.CreateNewGame(_newTama);
+        }
+
+        public void CreateTama()
+        {           
+            _newTama = new Tama(TamaName, 1, 0, 100, 100, 100, 100,
+            $"../../../TamaIMG/{GetCreatureType()}/Idle.gif", GetCreatureType());
         }
     }
 }

@@ -23,12 +23,10 @@ namespace Tamagotchi_WPF
     /// </summary>
     public partial class Game : UserControl
     {
-        DAL dal = new();
-        GameViewModel VM = new();
+        private GameViewModel VM => DataContext as GameViewModel;
         public Game()
         {
             InitializeComponent();
-            this.DataContext = VM;
         }
         private void Btn_FoodDrinks_Click(object sender, RoutedEventArgs e)
         {

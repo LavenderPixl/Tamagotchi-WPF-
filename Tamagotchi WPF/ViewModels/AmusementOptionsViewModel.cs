@@ -10,7 +10,6 @@ namespace Tamagotchi_WPF.ViewModels
 {
     class AmusementOptionsViewModel : ViewModelBase
     {
-        DAL dal = new DAL();
         public ObservableCollection<Amusement> VM_AmusementDataBase { get; set; }
         public AmusementOptionsViewModel()
         {
