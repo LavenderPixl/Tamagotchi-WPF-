@@ -22,13 +22,10 @@ namespace Tamagotchi_WPF
     /// </summary>
     public partial class MenuWindow : UserControl
     {
-        Game G = new Game();
-        DAL dal;
 
         public MenuWindow()
         {
             InitializeComponent();
-            dal = new DAL();
         }
 
         private void btn_New_Game_Click(object sender, RoutedEventArgs e)

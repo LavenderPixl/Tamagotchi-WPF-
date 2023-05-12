@@ -38,6 +38,11 @@ namespace Tamagotchi_WPF
         {
             Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri) { UseShellExecute = true });
         }
+
+        private void Window_ContentRendered(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

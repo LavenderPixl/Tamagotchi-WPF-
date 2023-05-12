@@ -24,7 +24,7 @@ namespace Tamagotchi_WPF
         {
             FoodDataBase = new ObservableCollection<Food>
             {
-                new Food("Dumplings", 50, 10),
+                new Food("Dumplings", 50, 100),
                 new Food("Sandwich", 50, 10),
                 new Food("Sushi", 50, 10),
                 new Food("Salad", 40, 10),
@@ -61,7 +61,8 @@ namespace Tamagotchi_WPF
                 "Bunny",
                 "Mantaray",
                 "Snake",
-                "Teddy"
+                "Teddy",
+                "Floofer"
             };
 
         public ObservableCollection<Food> GetFood()

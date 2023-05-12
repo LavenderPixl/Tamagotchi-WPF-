@@ -8,8 +8,10 @@
         xmlns:g="clr-namespace:Tamagotchi_WPF.NeedsOptions"
         xmlns:gif="http://wpfanimatedgif.codeplex.com/"
         mc:Ignorable="d"
+        Background="Transparent"
         Title="Tamagotchi" Height="640" Width="515"
         WindowStartupLocation="CenterScreen"
+        ContentRendered="Window_ContentRendered"
         ResizeMode="CanMinimize"
         Closed="Window_Closed">
     <Window.Resources>
