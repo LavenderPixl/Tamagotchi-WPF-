@@ -29,6 +29,12 @@ namespace Tamagotchi_WPF.NeedsOptions
             InitializeComponent();
             this.DataContext = VM;
         }
+        public void CloseWindow()
+        {
+            GM.Overlay.Visibility = Visibility.Collapsed;
+            GM.Overlay.IsHitTestVisible = false;
+            this.Close();
+        }
 
         private void btn_Care_Click(object sender, RoutedEventArgs e)
         {
@@ -39,7 +45,8 @@ namespace Tamagotchi_WPF.NeedsOptions
                     Care o = (Care)b.DataContext;
                     if (o != null)
                     {
-                        VM.PlayCare(o.ExperiencePoints);
+                        EventAggregator.UpdateTama(o.ExperiencePoints, "TamaXP");
+                        CloseWindow();
                     }
                 }
             }
@@ -47,9 +54,7 @@ namespace Tamagotchi_WPF.NeedsOptions
 
         private void btn_Close_Click(object sender, RoutedEventArgs e)
         {
-            GM.Overlay.Visibility = Visibility.Collapsed;
-            GM.Overlay.IsHitTestVisible = false;
-            this.Close();
+            CloseWindow();
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)

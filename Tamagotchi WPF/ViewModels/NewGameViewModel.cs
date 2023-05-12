@@ -51,11 +51,12 @@ namespace Tamagotchi_WPF.ViewModels
             CreateTama();
             EventAggregator.Broadcast(typeof(GameViewModel));
             EventAggregator.CreateNewGame(_newTama);
+            GameState.Instance.PlayerTama = _newTama;
         }
 
         public void CreateTama()
         {           
-            _newTama = new Tama(TamaName, 1, 0, 100, 100, 100, 100,
+            _newTama = new Tama(TamaName, 1, 0, 50, 50, 50, 50,
             $"../../../TamaIMG/{GetCreatureType()}/Idle.gif", GetCreatureType());
         }
     }

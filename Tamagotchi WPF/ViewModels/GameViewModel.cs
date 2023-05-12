@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Tamagotchi_WPF.Objects;
 
@@ -11,6 +13,8 @@ namespace Tamagotchi_WPF.ViewModels
     public class GameViewModel : ViewModelBase
     {
         private Tama _tama;
+        public string GifPath { get; set; }
+
 
         public string TamaName 
         { 
@@ -68,7 +72,6 @@ namespace Tamagotchi_WPF.ViewModels
                 return;
             }
         }
-
         public void CheckXP()
         {
 
@@ -83,6 +86,7 @@ namespace Tamagotchi_WPF.ViewModels
             EventAggregator.OnTransmittedTama += OnTransmittedTama;
             EventAggregator.OnUpdateTama += OnUpdateTama;
             _maxXP = 100;
+            GifPath = "";
         }
 
         private void OnTransmittedTama(Tama tama)
@@ -95,6 +99,5 @@ namespace Tamagotchi_WPF.ViewModels
             if (propertyName == nameof(TamaXP))
                 TamaXP += (int)value;
         }
-
     }
 }

@@ -9,6 +9,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="TamaIMG\Mantaray\**" />
+    <Compile Remove="TamaIMG\Snake\**" />
+    <Compile Remove="TamaIMG\Teddy\**" />
+    <EmbeddedResource Remove="TamaIMG\Mantaray\**" />
+    <EmbeddedResource Remove="TamaIMG\Snake\**" />
+    <EmbeddedResource Remove="TamaIMG\Teddy\**" />
+    <None Remove="TamaIMG\Mantaray\**" />
+    <None Remove="TamaIMG\Snake\**" />
+    <None Remove="TamaIMG\Teddy\**" />
+    <Page Remove="TamaIMG\Mantaray\**" />
+    <Page Remove="TamaIMG\Snake\**" />
+    <Page Remove="TamaIMG\Teddy\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="btn2.png" />
     <None Remove="IMG_0296.png" />
     <None Remove="IMG_0297 %281%29.png" />
@@ -52,15 +67,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="TamaIMG\Mantaray\" />
-    <Folder Include="TamaIMG\Snake\" />
-    <Folder Include="TamaIMG\Teddy\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="TamaIMG\Bunny\Base.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <Folder Include="TamaIMG\Bunny\" />
+    <Folder Include="TamaIMG\Floofer\" />
   </ItemGroup>
 
 </Project>
