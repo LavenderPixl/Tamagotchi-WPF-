@@ -38,7 +38,7 @@ namespace Tamagotchi_WPF
                 if (_counter >= 3)
                 {
                     Box_Naming.Visibility = Visibility.Visible;
-                    if (!string.IsNullOrEmpty(VM.TamaName)) //Checks if user has typed a name - If so; The name is sent to the Viewmodel, into tamaName. Then Displays Game (GAME STARTS)
+                    if (!string.IsNullOrEmpty(VM.TamaName)) //Checks if user has typed a name - If so; The name is sent to the ViewModel, into tamaName. Then Displays Game (GAME STARTS)
                     {
                         VM.StartGame();                        
                     }

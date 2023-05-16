@@ -26,6 +26,17 @@ namespace Tamagotchi_WPF.ViewModels
             } 
         }
 
+        //todo: Hunger value changes? 
+        public int TamaHunger
+        {
+            get => _tama.Hunger;
+            set
+            {
+                _tama.Hunger = value;
+                OnPropertyChanged(nameof(TamaHunger));
+            }
+        }
+        #region Level
         public int TamaLevel 
         { 
             get => _tama.Level;
@@ -45,7 +56,6 @@ namespace Tamagotchi_WPF.ViewModels
                 OnPropertyChanged(nameof(TamaXP));
             }
         }
-
         private int _maxXP;
         public int MaxXP
         {
@@ -64,7 +74,9 @@ namespace Tamagotchi_WPF.ViewModels
             try
             {
                 TamaLevel++;
-                TamaXP = 0;
+
+                int TempoXP = TamaXP - MaxXP;
+                TamaXP = TempoXP;
                 MaxXP = Convert.ToInt32(Math.Round(MaxXP * Multiplier));
             }
             catch (Exception)
@@ -80,6 +92,7 @@ namespace Tamagotchi_WPF.ViewModels
                 LevelUp();
             }
         }
+        #endregion
 
         public GameViewModel()
         {

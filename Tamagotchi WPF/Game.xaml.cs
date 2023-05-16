@@ -30,6 +30,9 @@ namespace Tamagotchi_WPF
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Opens Food options and starts a BackgroundWorker to change the FoodNeed ProgressBar.
+        /// </summary>
         private void Btn_FoodDrinks_Click(object sender, RoutedEventArgs e)
         {
             FoodOptions FO = new FoodOptions();
@@ -45,7 +48,9 @@ namespace Tamagotchi_WPF
 
             worker.RunWorkerAsync();
         }
-
+        /// <summary>
+        /// Opens Amusement options and starts a BackgroundWorker to change the AmusementNeed ProgressBar.
+        /// </summary>
         private void Btn_Amusement_Click(object sender, RoutedEventArgs e)
         {
             AmusementOptions AO = new AmusementOptions();
@@ -55,7 +60,9 @@ namespace Tamagotchi_WPF
             Overlay.IsHitTestVisible = true;
             AO.Show();
         }
-
+        /// <summary>
+        /// Opens Care options and starts a BackgroundWorker to change the CareNeed ProgressBar.
+        /// </summary>
         private void Btn_Care_Click(object sender, RoutedEventArgs e)
         {
             CareOptions CO = new CareOptions();
@@ -89,7 +96,6 @@ namespace Tamagotchi_WPF
             Bar_Food.Value = e.ProgressPercentage;
             GameState.Instance.PlayerTama.Hunger = e.ProgressPercentage;
         }
-
         private void Window_ContentRendered(object sender, EventArgs e)
         {
             BackgroundWorker worker = new BackgroundWorker();

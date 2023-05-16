@@ -35,7 +35,7 @@ namespace Tamagotchi_WPF
 
             CareDataBase = new ObservableCollection<Care>
             {
-                new Care("Bath", 50, 10),
+                new Care("Bath", 50, 100),
                 new Care("Sandbath", 50, 10),
                 new Care("Brush fur", 50, 10),
                 new Care("Brush teeth", 50, 10),
@@ -46,7 +46,7 @@ namespace Tamagotchi_WPF
 
             AmusementDataBase = new ObservableCollection<Amusement>
             {
-                new Amusement("Bouncy ball", 50, 10),
+                new Amusement("Bouncy ball", 50, 100),
                 new Amusement("Music", 50, 10),
                 new Amusement("Teddybear", 50, 10),
                 new Amusement("Chewy toy", 50, 10),
