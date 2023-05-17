@@ -9,15 +9,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="TamaIMG\Bunny\**" />
     <Compile Remove="TamaIMG\Mantaray\**" />
     <Compile Remove="TamaIMG\Snake\**" />
     <Compile Remove="TamaIMG\Teddy\**" />
+    <EmbeddedResource Remove="TamaIMG\Bunny\**" />
     <EmbeddedResource Remove="TamaIMG\Mantaray\**" />
     <EmbeddedResource Remove="TamaIMG\Snake\**" />
     <EmbeddedResource Remove="TamaIMG\Teddy\**" />
+    <None Remove="TamaIMG\Bunny\**" />
     <None Remove="TamaIMG\Mantaray\**" />
     <None Remove="TamaIMG\Snake\**" />
     <None Remove="TamaIMG\Teddy\**" />
+    <Page Remove="TamaIMG\Bunny\**" />
     <Page Remove="TamaIMG\Mantaray\**" />
     <Page Remove="TamaIMG\Snake\**" />
     <Page Remove="TamaIMG\Teddy\**" />
@@ -67,7 +71,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="TamaIMG\Bunny\" />
     <Folder Include="TamaIMG\Floofer\" />
   </ItemGroup>
 

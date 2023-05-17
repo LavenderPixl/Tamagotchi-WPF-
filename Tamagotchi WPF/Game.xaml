@@ -56,6 +56,7 @@
                         <TextBlock Text="{Binding TamaXP}" FontSize="10" Padding="0 0 0 0" />
                         <TextBlock Text="/" FontSize="10" Padding="1 0 1 0" />
                         <TextBlock Text="{Binding MaxXP}" FontSize="10" Padding="0 0 0 0" />
+                        <TextBlock Text="{Binding TamaAmusement}" FontSize="15" Padding="10 0 0 0" />
                     </StackPanel>
                     <TextBlock Text="{Binding TamaName}" Padding="10 0 0 0" />
                 </StackPanel>

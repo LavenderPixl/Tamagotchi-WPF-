@@ -46,6 +46,7 @@ namespace Tamagotchi_WPF.NeedsOptions
                     if (o != null)
                     {
                         EventAggregator.UpdateTama(o.ExperiencePoints, "TamaXP");
+                        EventAggregator.UpdateTama(o.AmusementFillment, "TamaAmusement");
                         CloseWindow();
                     }
                 }

@@ -41,12 +41,12 @@ namespace Tamagotchi_WPF
             Overlay.Visibility = Visibility.Visible;
             Overlay.IsHitTestVisible = true;
             FO.Show();
-            BackgroundWorker worker = new BackgroundWorker();
-            worker.WorkerReportsProgress = true;
-            worker.DoWork += worker_DoWork;
-            worker.ProgressChanged += worker_ProgressChanged;
+            //BackgroundWorker worker = new BackgroundWorker();
+            //worker.WorkerReportsProgress = true;
+            //worker.DoWork += worker_DoWork;
+            //worker.ProgressChanged += worker_ProgressChanged;
 
-            worker.RunWorkerAsync();
+            //worker.RunWorkerAsync();
         }
         /// <summary>
         /// Opens Amusement options and starts a BackgroundWorker to change the AmusementNeed ProgressBar.
@@ -83,27 +83,27 @@ namespace Tamagotchi_WPF
             QW.Show();
         }
 
-        void worker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            for (int i = 0; i < 100; i++)
-            {
-                (sender as BackgroundWorker).ReportProgress(i);
-                Thread.Sleep(100);
-            }
-        }
-        void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-            Bar_Food.Value = e.ProgressPercentage;
-            GameState.Instance.PlayerTama.Hunger = e.ProgressPercentage;
-        }
-        private void Window_ContentRendered(object sender, EventArgs e)
-        {
-            BackgroundWorker worker = new BackgroundWorker();
-            worker.WorkerReportsProgress = true;
-            worker.DoWork += worker_DoWork;
-            worker.ProgressChanged += worker_ProgressChanged;
+        //void worker_DoWork(object sender, DoWorkEventArgs e)
+        //{
+        //    for (int i = 0; i < 100; i++)
+        //    {
+        //        (sender as BackgroundWorker).ReportProgress(i);
+        //        Thread.Sleep(100);
+        //    }
+        //}
+        //void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        //{
+        //    Bar_Food.Value = e.ProgressPercentage;
+        //    GameState.Instance.PlayerTama.Hunger = e.ProgressPercentage;
+        //}
+        //private void Window_ContentRendered(object sender, EventArgs e)
+        //{
+        //    BackgroundWorker worker = new BackgroundWorker();
+        //    worker.WorkerReportsProgress = true;
+        //    worker.DoWork += worker_DoWork;
+        //    worker.ProgressChanged += worker_ProgressChanged;
 
-            worker.RunWorkerAsync();
-        }
+        //    worker.RunWorkerAsync();
+        //}
     }
 }

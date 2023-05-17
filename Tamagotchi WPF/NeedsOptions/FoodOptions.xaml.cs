@@ -45,7 +45,7 @@ namespace Tamagotchi_WPF.NeedsOptions
                     if (o != null)
                     {
                         EventAggregator.UpdateTama(o.ExperiencePoints, "TamaXP");
-                        EventAggregator.UpdateTama(o.FoodFillment, "TamaFood");
+                        EventAggregator.UpdateTama(o.FoodFillment, "TamaHunger");
                         CloseWindow();
                     }
                 }

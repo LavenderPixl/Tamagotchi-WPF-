@@ -15,18 +15,16 @@ namespace Tamagotchi_WPF.ViewModels
         private Tama _tama;
         public string GifPath { get; set; }
 
-
-        public string TamaName 
-        { 
+        public string TamaName
+        {
             get => _tama.Name;
             set
             {
                 _tama.Name = value;
                 OnPropertyChanged(nameof(TamaName));
-            } 
+            }
         }
 
-        //todo: Hunger value changes? 
         public int TamaHunger
         {
             get => _tama.Hunger;
@@ -36,17 +34,37 @@ namespace Tamagotchi_WPF.ViewModels
                 OnPropertyChanged(nameof(TamaHunger));
             }
         }
+
+        public int TamaCare
+        {
+            get => _tama.Care;
+            set
+            {
+                _tama.Care = value;
+                OnPropertyChanged(nameof(TamaCare));
+            }
+        }
+        public int TamaAmusement
+        {
+            get => _tama.Amusement;
+            set
+            {
+                _tama.Amusement = value;
+                OnPropertyChanged(nameof(TamaAmusement));
+            }
+        }
+
         #region Level
-        public int TamaLevel 
-        { 
+        public int TamaLevel
+        {
             get => _tama.Level;
             set
             {
                 _tama.Level = value;
                 OnPropertyChanged(nameof(TamaLevel));
-            } 
+            }
         }
-        public int TamaXP 
+        public int TamaXP
         {
             get => _tama.XP;
             set
@@ -68,7 +86,14 @@ namespace Tamagotchi_WPF.ViewModels
         }
 
         private const float Multiplier = 1.25f;
+        public void CheckXP()
+        {
 
+            if (TamaXP >= MaxXP)
+            {
+                LevelUp();
+            }
+        }
         public void LevelUp()
         {
             try
@@ -84,14 +109,7 @@ namespace Tamagotchi_WPF.ViewModels
                 return;
             }
         }
-        public void CheckXP()
-        {
 
-            if (TamaXP >= MaxXP)
-            {
-                LevelUp();
-            }
-        }
         #endregion
 
         public GameViewModel()
@@ -106,11 +124,25 @@ namespace Tamagotchi_WPF.ViewModels
         {
             _tama = tama;
         }
-
+        //Todo: Apply Care & Amusement props
         private void OnUpdateTama(object value, string propertyName)
         {
-            if (propertyName == nameof(TamaXP))
+            if (propertyName == nameof(TamaHunger))
+            {
+                TamaHunger += (int)value;
+            }
+            else if (propertyName == nameof(TamaXP))
+            {
                 TamaXP += (int)value;
+            }
+            else if (propertyName == nameof(TamaCare))
+            {
+                TamaCare += (int)value;
+            }
+            else if(propertyName == nameof(TamaAmusement))
+            {
+                TamaAmusement += (int)value;
+            }
         }
     }
 }
