@@ -56,7 +56,6 @@
                         <TextBlock Text="{Binding TamaXP}" FontSize="10" Padding="0 0 0 0" />
                         <TextBlock Text="/" FontSize="10" Padding="1 0 1 0" />
                         <TextBlock Text="{Binding MaxXP}" FontSize="10" Padding="0 0 0 0" />
-                        <TextBlock Text="{Binding TamaAmusement}" FontSize="15" Padding="10 0 0 0" />
                     </StackPanel>
                     <TextBlock Text="{Binding TamaName}" Padding="10 0 0 0" />
                 </StackPanel>
@@ -88,13 +87,13 @@
 
             <!--Progress Bars, for NEEDS-->
             <Border BorderBrush="#8DBDC8" BorderThickness="1" Height="20" Width="119" VerticalAlignment="Top" Margin="0 10 0 0">
-                <ProgressBar x:Name="Bar_Food" Minimum="0" Maximum="100" Foreground="#8DBDC8" BorderThickness="0" />
+                <ProgressBar x:Name="Bar_Food" Minimum="0" Maximum="100" Value="{Binding TamaHunger}" Foreground="#8DBDC8" BorderThickness="0" />
             </Border>
             <Border BorderBrush="#8DBDC8" BorderThickness="1" Height="20" Width="119" Grid.Column="1"  VerticalAlignment="Top" Margin="0 10 0 0">
-                <ProgressBar x:Name="Bar_Amusement" Value="10"  Foreground="#8DBDC8" BorderThickness="0" />
+                <ProgressBar x:Name="Bar_Amusement" Minimum="0" Maximum="100" Value="{Binding TamaAmusement}" Foreground="#8DBDC8" BorderThickness="0" />
             </Border>
             <Border BorderBrush="#8DBDC8" BorderThickness="1" Height="20" Width="119" Grid.Column="3"  VerticalAlignment="Top" Margin="0 10 0 0">
-                <ProgressBar x:Name="Bar_Care" Value="10"  Foreground="#8DBDC8" BorderThickness="0" />
+                <ProgressBar x:Name="Bar_Care" Minimum="0" Maximum="100" Value="{Binding TamaCare}" Foreground="#8DBDC8" BorderThickness="0" />
             </Border>
 
             <!--Buttons for NEEDS-->

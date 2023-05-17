@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
@@ -13,6 +14,8 @@ namespace Tamagotchi_WPF.ViewModels
     public class GameViewModel : ViewModelBase
     {
         private Tama _tama;
+        //todo: prob fix
+        public int tHunger = 0;
         public string GifPath { get; set; }
 
         public string TamaName
@@ -31,6 +34,7 @@ namespace Tamagotchi_WPF.ViewModels
             set
             {
                 _tama.Hunger = value;
+                tHunger = _tama.Hunger;
                 OnPropertyChanged(nameof(TamaHunger));
             }
         }
@@ -124,24 +128,52 @@ namespace Tamagotchi_WPF.ViewModels
         {
             _tama = tama;
         }
+
+
+        Thread t = new Thread(new ThreadStart(ThreadProc));
+
+        //todo: fix
+        public static void ThreadProc()
+        {
+            while (tHunger > 0)
+            {
+                tHunger  -= 1;
+                int s = tHunger;
+                s -= tHunger;
+                Thread.Sleep(100);
+            }
+            tHunger = 0;
+        }
         //Todo: Apply Care & Amusement props
         private void OnUpdateTama(object value, string propertyName)
         {
-            if (propertyName == nameof(TamaHunger))
-            {
-                TamaHunger += (int)value;
-            }
-            else if (propertyName == nameof(TamaXP))
+            if (propertyName == nameof(TamaXP))
             {
                 TamaXP += (int)value;
+            }
+            else if (propertyName == nameof(TamaHunger))
+            {
+                TamaHunger += (int)value;
+                if (TamaHunger > 100)
+                {
+                    TamaHunger = 100;
+                }
             }
             else if (propertyName == nameof(TamaCare))
             {
                 TamaCare += (int)value;
+                if (TamaCare > 100)
+                {
+                    TamaCare = 100;
+                }
             }
-            else if(propertyName == nameof(TamaAmusement))
+            else if (propertyName == nameof(TamaAmusement))
             {
                 TamaAmusement += (int)value;
+                if (TamaAmusement > 100)
+                {
+                    TamaAmusement = 100;
+                }
             }
         }
     }

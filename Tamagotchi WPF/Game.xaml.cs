@@ -41,12 +41,6 @@ namespace Tamagotchi_WPF
             Overlay.Visibility = Visibility.Visible;
             Overlay.IsHitTestVisible = true;
             FO.Show();
-            //BackgroundWorker worker = new BackgroundWorker();
-            //worker.WorkerReportsProgress = true;
-            //worker.DoWork += worker_DoWork;
-            //worker.ProgressChanged += worker_ProgressChanged;
-
-            //worker.RunWorkerAsync();
         }
         /// <summary>
         /// Opens Amusement options and starts a BackgroundWorker to change the AmusementNeed ProgressBar.
@@ -83,6 +77,8 @@ namespace Tamagotchi_WPF
             QW.Show();
         }
 
+
+
         //void worker_DoWork(object sender, DoWorkEventArgs e)
         //{
         //    for (int i = 0; i < 100; i++)
@@ -105,5 +101,6 @@ namespace Tamagotchi_WPF
 
         //    worker.RunWorkerAsync();
         //}
+
     }
 }
