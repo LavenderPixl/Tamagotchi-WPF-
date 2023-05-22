@@ -10,7 +10,7 @@ namespace Tamagotchi_WPF
     public class GameState
     {
 
-        public Tama PlayerTama { get; set; }
+        public static Tama PlayerTama { get; set; }
 
         private static GameState instance = null;
 

@@ -11,7 +11,6 @@
         Background="Transparent"
         Title="Tamagotchi" Height="640" Width="515"
         WindowStartupLocation="CenterScreen"
-        ContentRendered="Window_ContentRendered"
         ResizeMode="CanMinimize"
         Closed="Window_Closed">
     <Window.Resources>

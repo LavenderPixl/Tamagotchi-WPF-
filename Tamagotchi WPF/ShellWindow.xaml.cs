@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
@@ -32,17 +33,18 @@ namespace Tamagotchi_WPF
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            Application.Current.Shutdown();
+            if (MessageBox.Show("save","save",MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                FileHandling.SaveTama();
+            }
+            //Application.Current.Shutdown();
+
         }
         private void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
         {
             Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri) { UseShellExecute = true });
         }
 
-        private void Window_ContentRendered(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 

@@ -19,7 +19,7 @@ namespace Tamagotchi_WPF.ViewModels
         }
         public void EatFood(int XP)
         {
-            GameState.Instance.PlayerTama.XP += XP; 
+            GameState.PlayerTama.XP += XP; 
         }
     }
 }

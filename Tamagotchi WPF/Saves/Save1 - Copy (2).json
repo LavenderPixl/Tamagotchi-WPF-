@@ -1,0 +1,11 @@
+{
+  "Name": "sad",
+  "Level": 2,
+  "XP": 0,
+  "Hunger": 100,
+  "Amusement": 50,
+  "Care": 50,
+  "Mood": 50,
+  "ImagePath": "../../../TamaIMG/Mantaray/Idle.gif",
+  "CreatureType": "Mantaray"
+}

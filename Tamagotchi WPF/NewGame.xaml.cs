@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Diagnostics;
 using Tamagotchi_WPF.ViewModels;
+using System.ComponentModel;
 
 namespace Tamagotchi_WPF
 {
@@ -40,7 +41,7 @@ namespace Tamagotchi_WPF
                     Box_Naming.Visibility = Visibility.Visible;
                     if (!string.IsNullOrEmpty(VM.TamaName)) //Checks if user has typed a name - If so; The name is sent to the ViewModel, into tamaName. Then Displays Game (GAME STARTS)
                     {
-                        VM.StartGame();                        
+                        VM.StartGame();
                     }
                 }                
             }

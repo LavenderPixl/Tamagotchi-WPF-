@@ -14,8 +14,6 @@ namespace Tamagotchi_WPF.ViewModels
     public class GameViewModel : ViewModelBase
     {
         private Tama _tama;
-        //todo: prob fix
-        public int tHunger = 0;
         public string GifPath { get; set; }
 
         public string TamaName
@@ -34,7 +32,6 @@ namespace Tamagotchi_WPF.ViewModels
             set
             {
                 _tama.Hunger = value;
-                tHunger = _tama.Hunger;
                 OnPropertyChanged(nameof(TamaHunger));
             }
         }
@@ -78,13 +75,13 @@ namespace Tamagotchi_WPF.ViewModels
                 OnPropertyChanged(nameof(TamaXP));
             }
         }
-        private int _maxXP;
+        //private int _maxXP;
         public int MaxXP
         {
-            get => _maxXP;
+            get => GameState.PlayerTama.CurrentMaxXP;
             set
             {
-                _maxXP = value;
+                GameState.PlayerTama.CurrentMaxXP = value;
                 OnPropertyChanged(nameof(MaxXP));
             }
         }
@@ -120,7 +117,7 @@ namespace Tamagotchi_WPF.ViewModels
         {
             EventAggregator.OnTransmittedTama += OnTransmittedTama;
             EventAggregator.OnUpdateTama += OnUpdateTama;
-            _maxXP = 100;
+            //_maxXP = GameState.PlayerTama.CurrentMaxXP;
             GifPath = "";
         }
 
@@ -130,20 +127,7 @@ namespace Tamagotchi_WPF.ViewModels
         }
 
 
-        Thread t = new Thread(new ThreadStart(ThreadProc));
-
-        //todo: fix
-        public static void ThreadProc()
-        {
-            while (tHunger > 0)
-            {
-                tHunger  -= 1;
-                int s = tHunger;
-                s -= tHunger;
-                Thread.Sleep(100);
-            }
-            tHunger = 0;
-        }
+        #region UpdatedProps
         //Todo: Apply Care & Amusement props
         private void OnUpdateTama(object value, string propertyName)
         {
@@ -176,5 +160,6 @@ namespace Tamagotchi_WPF.ViewModels
                 }
             }
         }
+        #endregion
     }
 }
