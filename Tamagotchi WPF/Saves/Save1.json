@@ -1,11 +1,11 @@
 {
   "Name": "DDD",
   "Level": 2,
-  "XP": 100,
+  "XP": 120,
   "CurrentMaxXP": 125,
   "Hunger": 100,
-  "Amusement": 50,
-  "Care": 50,
+  "Amusement": 100,
+  "Care": 100,
   "Mood": 50,
   "ImagePath": "../../../TamaIMG/Mantaray/Idle.gif",
   "CreatureType": "Mantaray"

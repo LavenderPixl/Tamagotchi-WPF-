@@ -13,6 +13,7 @@ namespace Tamagotchi_WPF.ViewModels
         public SavesViewModel()
         {
             tamaFiles = FileHandling.ReadSaveFiles();
+
         }
     }
 }

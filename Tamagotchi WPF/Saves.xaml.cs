@@ -22,8 +22,6 @@ namespace Tamagotchi_WPF
     /// </summary>
     public partial class Saves : UserControl
     {
-        public string? Navn { get; set; }
-
         public Saves()
         {
             InitializeComponent();
@@ -38,11 +36,13 @@ namespace Tamagotchi_WPF
             {
                 if (b.DataContext is Tama tama)
                 {
-                    //Tama tt = new Tama(tama.Name, tama.Level,);
                     Tama tt = tama;
-                    EventAggregator.Broadcast(typeof(GameViewModel));
-                    EventAggregator.CreateNewGame(tt);
                     GameState.PlayerTama = tt;
+                    EventAggregator.Broadcast(typeof(SaveInformationViewModel));
+
+
+                    //EventAggregator.Broadcast(typeof(GameViewModel));
+                    //EventAggregator.CreateNewGame(tt);
                 }
             }
         }
@@ -51,7 +51,5 @@ namespace Tamagotchi_WPF
         {
             EventAggregator.Broadcast(typeof(MenuWindowViewModel));
         }
-
-
     }
 }

@@ -16,6 +16,10 @@ namespace Tamagotchi_WPF
             string[] saves = Directory.GetFiles("../../../Saves/", "*.json", SearchOption.TopDirectoryOnly);
             return saves;
         }
+        /// <summary>
+        /// Reads Save files, and converts them into a List.
+        /// </summary>
+        /// <returns>List of Tamas</returns>
         public static List<Tama> ReadSaveFiles()
         {
             List<Tama> savesList = new List<Tama>();
@@ -31,7 +35,7 @@ namespace Tamagotchi_WPF
         public static void SaveTama()
         {
             var Save = JsonConvert.SerializeObject(GameState.PlayerTama, Formatting.Indented);
-            File.WriteAllText("../../../Saves/Save1.json", Save);
+            File.WriteAllText($"../../../Saves/{GameState.PlayerTama.Name}.json", Save);
         }
     }
 }

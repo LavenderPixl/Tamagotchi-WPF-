@@ -1,0 +1,12 @@
+{
+  "Name": "dsada",
+  "Level": 1,
+  "XP": 0,
+  "CurrentMaxXP": 100,
+  "Hunger": 50,
+  "Amusement": 50,
+  "Care": 50,
+  "Mood": 50,
+  "ImagePath": "../../../TamaIMG/Snake/Idle.gif",
+  "CreatureType": "Snake"
+}

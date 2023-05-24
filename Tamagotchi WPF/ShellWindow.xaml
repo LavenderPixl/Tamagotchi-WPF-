@@ -29,6 +29,9 @@
         <DataTemplate DataType="{x:Type f:GameViewModel}">
             <local:Game/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type f:SaveInformationViewModel}">
+            <local:SaveInformation/>
+        </DataTemplate>
     </Window.Resources>
     <Grid>
         <ContentPresenter Content="{Binding CurrentView}"></ContentPresenter>

@@ -29,7 +29,7 @@ namespace Tamagotchi_WPF
 
         private void btn_Save_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void btn_SaveAndQuit_Click(object sender, RoutedEventArgs e)
