@@ -36,6 +36,9 @@
     <None Remove="Pictures\Bone2.png" />
     <None Remove="Pictures\Care.png" />
     <None Remove="Pictures\Menu.png" />
+    <None Remove="TamaIMG\Floofer\HappyToIdle.gif" />
+    <None Remove="TamaIMG\Floofer\Idle.png" />
+    <None Remove="TamaIMG\Floofer\IdleAnim.gif" />
     <None Remove="Tree.png" />
   </ItemGroup>
 
@@ -69,10 +72,15 @@
     <Resource Include="Pictures\Tree.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="TamaIMG\Floofer\" />
+    <Resource Include="TamaIMG\Floofer\HappyToIdle.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="TamaIMG\Floofer\Idle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="TamaIMG\Floofer\IdleAnim.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

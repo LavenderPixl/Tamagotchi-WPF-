@@ -39,10 +39,6 @@ namespace Tamagotchi_WPF
                     Tama tt = tama;
                     GameState.PlayerTama = tt;
                     EventAggregator.Broadcast(typeof(SaveInformationViewModel));
-
-
-                    //EventAggregator.Broadcast(typeof(GameViewModel));
-                    //EventAggregator.CreateNewGame(tt);
                 }
             }
         }

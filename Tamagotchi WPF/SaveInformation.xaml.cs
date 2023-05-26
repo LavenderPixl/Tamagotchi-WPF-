@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Tamagotchi_WPF.Objects;
+using Tamagotchi_WPF.ViewModels;
 
 namespace Tamagotchi_WPF
 {
@@ -25,9 +26,17 @@ namespace Tamagotchi_WPF
         {
             InitializeComponent();
         }
-        //Tama tt = tama;
-        //EventAggregator.Broadcast(typeof(GameViewModel));
-        //            EventAggregator.CreateNewGame(tt);
-        //            GameState.PlayerTama = tt;
+        private void Btn_GoBack_Click(object sender, RoutedEventArgs e)
+        {
+            EventAggregator.Broadcast(typeof(SavesViewModel));
+        }
+        private void Btn_Load_Save_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button b)
+            {
+                EventAggregator.Broadcast(typeof(GameViewModel));
+
+            }
+        }
     }
 }

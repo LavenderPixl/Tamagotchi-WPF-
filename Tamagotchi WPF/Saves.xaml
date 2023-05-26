@@ -50,7 +50,7 @@
                 </ScrollViewer>
 
             <!-- HOME MENU -->
-            <Button x:Name="Btn_Home_Menu" Click="Btn_Home_Menu_Click" Padding="0" Height="35" Grid.Column="3" Grid.ColumnSpan="2" Margin="0 0 10 10" VerticalAlignment="Bottom" BorderBrush="#96AF8E" BorderThickness="0 0 0 3">
+            <Button x:Name="Btn_Home_Menu" Click="Btn_Home_Menu_Click" Padding="0" Height="35" Width="80" Grid.Column="3" Grid.ColumnSpan="2" Margin="0 0 10 10" VerticalAlignment="Bottom" BorderBrush="#96AF8E" BorderThickness="0 0 0 3">
                 <Grid>
                     <Image Source="Pictures/btn2.png" Stretch="UniformToFill" />
                     <TextBlock Text="Home Menu" HorizontalAlignment="Center" VerticalAlignment="Center"/>

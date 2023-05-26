@@ -8,49 +8,95 @@
              Background="#BACFB3" Height="600" Width="500">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="500"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <Image Source="Pictures/IMG_0296.png" Grid.Row="1" Stretch="UniformToFill" />
+        <Image Source="Pictures/IMG_0296.png" Grid.Row="1" Stretch="UniformToFill" Grid.RowSpan="2" />
 
         <Border BorderBrush="#96AF8E" BorderThickness="0 0 0 5" Background="#B1D5DD">
             <Image Source="Pictures/IMG_0297 (1).png" Stretch="UniformToFill" />
         </Border>
 
         <Border BorderBrush="#96AF8E" BorderThickness="5" Grid.Row="1" Margin="60">
-
+            <!-- TODO: Add image of Tama here.-->
+            <Image Source="{Binding tamaFile.ImagePath}"/>
         </Border>
 
         <!-- NAME on top-->
-        <TextBlock x:Name="NameTop" Text="namenamename" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Grid Grid.Row="1" Height="60" VerticalAlignment="Top">
+        <TextBlock x:Name="NameTop" Text="{Binding tamaFile.Name}" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
+
+        <Grid Grid.Row="1" Height="60" VerticalAlignment="Top" Width="380">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <!--<TextBlock x:Name="XP" Text="namenamename" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>-->
 
-            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.ColumnSpan="2">
-                <TextBlock x:Name="Name" Text="{Binding tamaFile.Name}" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <TextBlock x:Name="Level" Text="{Binding tamaFile.Level}" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <TextBlock x:Name="Type" Text="{Binding tamaFile.CreatureType}" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,126,0" Grid.ColumnSpan="2">
+                <TextBlock Text="Name: " FontSize="14"/>
+                <TextBlock x:Name="Name" Text="{Binding tamaFile.Name}" FontSize="14"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Column="1" VerticalAlignment="Center">
+                <TextBlock Text="Lvl. " FontSize="14"/>
+                <TextBlock x:Name="Level" Text="{Binding tamaFile.Level}" FontSize="14" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Column="1"  VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="126,0,0,0">
+                <TextBlock Text="Type: " FontSize="14"/>
+                <TextBlock x:Name="Type" Text="{Binding tamaFile.CreatureType}" FontSize="14"/>
+            </StackPanel>
+
+        </Grid>
+
+        <Grid Grid.Row="1" Height="60" VerticalAlignment="Bottom" Width="380">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="0,0,126,0">
+                <TextBlock Text="Hunger: " FontSize="14"/>
+                <TextBlock x:Name="Hunger" FontSize="14" Text="{Binding tamaFile.Hunger}" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="Amusement: " FontSize="14"/>
+                <TextBlock x:Name="Amusement" FontSize="14" Text="{Binding tamaFile.Amusement}" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="126,0,0,0">
+                <TextBlock Text="Care: " FontSize="14" />
+                <TextBlock x:Name="Care" FontSize="14" Text="{Binding tamaFile.Care}" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
         </Grid>
-        <Grid Grid.Row="2" Height="60" VerticalAlignment="Bottom">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-            </Grid.ColumnDefinitions>
 
-            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.ColumnSpan="2">
-                <TextBlock Text="Hunger: "/>
-                <TextBlock x:Name="Hunger" Text="{Binding tamaFile.Hunger}" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <TextBlock Text="Amusement: "/>
-                <TextBlock x:Name="Amusement" Text="{Binding tamaFile.Amusement}" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <TextBlock Text="Care: "/>
-                <TextBlock x:Name="Care" Text="{Binding tamaFile.Care}" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            </StackPanel>
+        <!-- BUTTONS -->
+        <Grid Grid.Row="2">
+            <!-- HOME MENU -->
+            <Button x:Name="Btn_GoBack" Click="Btn_GoBack_Click" Padding="0" Height="35" Width="70" Margin="0 10 10 10" HorizontalAlignment="Right" BorderBrush="#96AF8E" BorderThickness="0 0 0 3">
+                <Grid>
+                    <Image Source="Pictures/btn2.png" Stretch="UniformToFill" />
+                    <TextBlock Text="Go Back" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+
+            <!--<ItemsControl ItemsSource="{Binding tamaFile}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>-->
+                        <Button x:Name="Btn_Load_Save" Click="Btn_Load_Save_Click" Padding="0" Height="35" Width="70" Margin="0 10 90 10" HorizontalAlignment="Right" BorderBrush="#96AF8E" BorderThickness="0 0 0 3">
+                            <Grid>
+                                <Image Source="Pictures/btn2.png" Stretch="UniformToFill" />
+                                <TextBlock Text="Load Save" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Grid>
+                        </Button>
+                    <!--</DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>-->
+
         </Grid>
     </Grid>
 </UserControl>

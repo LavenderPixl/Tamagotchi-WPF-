@@ -7,6 +7,6 @@
   "Amusement": 50,
   "Care": 50,
   "Mood": 50,
-  "ImagePath": "../../../TamaIMG/Snake/Idle.gif",
-  "CreatureType": "Snake"
+  "ImagePath": "../../../TamaIMG/Floofer/Idle.png",
+  "CreatureType": "Floofer"
 }

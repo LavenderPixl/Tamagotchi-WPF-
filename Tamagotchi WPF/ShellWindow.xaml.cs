@@ -37,8 +37,6 @@ namespace Tamagotchi_WPF
             {
                 FileHandling.SaveTama();
             }
-            //Application.Current.Shutdown();
-
         }
         private void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
         {
