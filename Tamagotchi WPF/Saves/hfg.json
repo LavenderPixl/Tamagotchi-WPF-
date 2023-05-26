@@ -1,0 +1,12 @@
+{
+  "Name": "hfg",
+  "Level": 2,
+  "XP": 0,
+  "CurrentMaxXP": 125,
+  "Hunger": 50,
+  "Amusement": 100,
+  "Care": 50,
+  "Mood": 50,
+  "ImagePath": "../../../TamaIMG/Mantaray/Idle.gif",
+  "CreatureType": "Mantaray"
+}

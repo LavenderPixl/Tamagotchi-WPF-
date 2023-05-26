@@ -117,8 +117,8 @@ namespace Tamagotchi_WPF.ViewModels
         {
             EventAggregator.OnTransmittedTama += OnTransmittedTama;
             EventAggregator.OnUpdateTama += OnUpdateTama;
-            //_maxXP = GameState.PlayerTama.CurrentMaxXP;
             GifPath = "";
+            _tama = GameState.PlayerTama;
         }
 
         private void OnTransmittedTama(Tama tama)

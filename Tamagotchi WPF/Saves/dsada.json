@@ -1,9 +1,9 @@
 {
   "Name": "dsada",
-  "Level": 1,
+  "Level": 2,
   "XP": 0,
-  "CurrentMaxXP": 100,
-  "Hunger": 50,
+  "CurrentMaxXP": 125,
+  "Hunger": 100,
   "Amusement": 50,
   "Care": 50,
   "Mood": 50,

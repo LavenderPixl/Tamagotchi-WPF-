@@ -13,7 +13,6 @@ namespace Tamagotchi_WPF.ViewModels
         public SaveInformationViewModel()
         {
             tamaFile = GameState.PlayerTama;
-            OnPropertyChanged("tamaFile");
         }
 
     }
