@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="Tamagotchi_WPF.DisplaySavesAfterQuit"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Tamagotchi_WPF"
+             mc:Ignorable="d" 
+             Background="#BACFB3" Height="600" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="99"/>
+            <RowDefinition Height="501"/>
+        </Grid.RowDefinitions>
+        <Image Source="Pictures/IMG_0296.png" Grid.Row="1" Stretch="UniformToFill" />
+
+        <Border BorderBrush="#96AF8E" BorderThickness="0 0 0 5" Background="#B1D5DD">
+            <Image Source="Pictures/IMG_0297 (1).png" Stretch="UniformToFill" />
+        </Border>
+
+        <TextBlock Text="Create a new Save, or Overwrite an older save" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Create new Save, BUTTON-->
+            <Button x:Name="btn_CreateNewSave" Click="btn_CreateNewSave_Click" Grid.Column="1" Grid.ColumnSpan="2" Height="30" Width="140" Margin="0 15 0 0" VerticalAlignment="Top" HorizontalAlignment="Center"  Background="#B1D5DD" BorderBrush="#96AF8E" BorderThickness="0 0 0 4">
+                <Grid>
+                    <Image Source="Pictures/btn2.png" Stretch="UniformToFill"/>
+                    <TextBlock Text="Create new Save" HorizontalAlignment="Center" FontSize="14"/>
+                </Grid>
+            </Button>
+            
+            <!--SAVES-->
+            <ScrollViewer Grid.ColumnSpan="2" Grid.Column="1" Margin="0 60 0 20" Background="#87A37F" VerticalScrollBarVisibility="Hidden" Width="210">
+                <ItemsControl ItemsSource="{Binding tamaFiles}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button x:Name="btn_SaveFile" HorizontalContentAlignment="Left" Width="182" Height="47" BorderBrush="#96AF8E" BorderThickness="0 0 0 3" Padding="0" Margin="0 10 0 0" Click="btn_SaveFile_Click">
+                                <Grid Width="182" Height="44">
+                                    <Image Source="Pictures/btn2.png" Stretch="UniformToFill"/>
+                                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <TextBlock Text="{Binding Name}" VerticalAlignment="Center" FontSize="14"/>
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                            <TextBlock Text="Lvl. "/>
+                                            <TextBlock Text="{Binding Level}"/>
+                                            <TextBlock Text="{Binding CreatureType}" Margin="5 0 0 0"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Grid>
+                            </Button>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</UserControl>

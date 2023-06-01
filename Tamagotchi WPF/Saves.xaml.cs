@@ -36,8 +36,7 @@ namespace Tamagotchi_WPF
             {
                 if (b.DataContext is Tama tama)
                 {
-                    Tama tt = tama;
-                    GameState.PlayerTama = tt;
+                    GameState.PlayerTama = tama;
                     EventAggregator.Broadcast(typeof(SaveInformationViewModel));
                 }
             }

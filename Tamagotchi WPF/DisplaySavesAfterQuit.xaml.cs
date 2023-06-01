@@ -18,24 +18,33 @@ using Tamagotchi_WPF.ViewModels;
 namespace Tamagotchi_WPF
 {
     /// <summary>
-    /// Interaction logic for SaveInformation.xaml
+    /// Interaction logic for DisplaySavesAfterQuit.xaml
     /// </summary>
-    public partial class SaveInformation : UserControl
+    public partial class DisplaySavesAfterQuit : UserControl
     {
-        public SaveInformation()
+        public DisplaySavesAfterQuit()
         {
             InitializeComponent();
         }
-        private void Btn_GoBack_Click(object sender, RoutedEventArgs e)
-        {
-            EventAggregator.Broadcast(typeof(SavesViewModel));
-        }
-        private void Btn_Load_Save_Click(object sender, RoutedEventArgs e)
+
+        private void btn_SaveFile_Click(object sender, RoutedEventArgs e)
         {
             if (sender is Button b)
             {
-                EventAggregator.Broadcast(typeof(GameViewModel));
+                if (b.DataContext is Tama tama)
+                {
+                    FileHandling.SaveTama(tama);    
+                }
+                else
+                {
+                    throw new Exception("Button is not a Tama object");
+                }
             }
+        }
+
+        private void btn_CreateNewSave_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

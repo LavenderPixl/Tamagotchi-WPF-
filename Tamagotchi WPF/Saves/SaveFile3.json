@@ -1,5 +1,6 @@
 {
-  "Name": "dsada",
+  "TamaId": 3,
+  "Name": "A",
   "Level": 2,
   "XP": 0,
   "CurrentMaxXP": 125,
@@ -7,6 +8,6 @@
   "Amusement": 50,
   "Care": 50,
   "Mood": 50,
-  "ImagePath": "../../../TamaIMG/Floofer/Idle.png",
-  "CreatureType": "Floofer"
+  "ImagePath": "../../../TamaIMG/Teddy/Idle.gif",
+  "CreatureType": "Teddy"
 }

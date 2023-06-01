@@ -8,6 +8,7 @@ namespace Tamagotchi_WPF.Objects
 {
     public class Tama
     {
+        public int TamaId { get; set; }
         public string Name { get; set; }
         public int Level { get; set; }
         public int XP { get; set; }

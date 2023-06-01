@@ -58,6 +58,7 @@ namespace Tamagotchi_WPF.ViewModels
         {           
             _newTama = new Tama(TamaName, 1, 0, 100, 50, 50, 50, 50,
             $"../../../TamaIMG/{GetCreatureType()}/Idle.gif", GetCreatureType());
+            _newTama.TamaId = 1;
         }
     }
 }

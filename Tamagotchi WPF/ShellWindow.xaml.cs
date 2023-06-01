@@ -33,10 +33,10 @@ namespace Tamagotchi_WPF
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            if (MessageBox.Show("save","save",MessageBoxButton.YesNo) == MessageBoxResult.Yes)
-            {
-                FileHandling.SaveTama();
-            }
+            //if (MessageBox.Show("save","save",MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            //{
+            //    FileHandling.SaveTama();
+            //}
         }
         private void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
         {

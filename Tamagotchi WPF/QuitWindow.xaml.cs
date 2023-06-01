@@ -29,17 +29,25 @@ namespace Tamagotchi_WPF
 
         private void btn_Save_Click(object sender, RoutedEventArgs e)
         {
-            
+            GM.Overlay.Visibility = Visibility.Collapsed;
+            GM.Overlay.IsHitTestVisible = false;
+            this.Close();
+            EventAggregator.Broadcast(typeof(DisplaySavesAfterQuitViewModel));
+
         }
 
         private void btn_SaveAndQuit_Click(object sender, RoutedEventArgs e)
         {
-
+            GM.Overlay.Visibility = Visibility.Collapsed;
+            GM.Overlay.IsHitTestVisible = false;
+            this.Close();
         }
 
         private void btn_QuitGame_Click(object sender, RoutedEventArgs e)
         {
-
+            GM.Overlay.Visibility = Visibility.Collapsed;
+            GM.Overlay.IsHitTestVisible = false;
+            this.Close();
         }
 
         private void btn_Close_Click(object sender, RoutedEventArgs e)

@@ -32,6 +32,9 @@
         <DataTemplate DataType="{x:Type f:SaveInformationViewModel}">
             <local:SaveInformation/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type f:DisplaySavesAfterQuitViewModel}">
+            <local:DisplaySavesAfterQuit/>
+        </DataTemplate>
     </Window.Resources>
     <Grid>
         <ContentPresenter Content="{Binding CurrentView}"></ContentPresenter>
