@@ -33,7 +33,11 @@ namespace Tamagotchi_WPF
             {
                 if (b.DataContext is Tama tama)
                 {
-                    FileHandling.SaveTama(tama);    
+                    FileHandling.SaveTama(tama);
+                    if (GameState.Instance.QuitAfterSave) // ?? -> QuitWindow public boolean
+                    {
+
+                    }
                 }
                 else
                 {

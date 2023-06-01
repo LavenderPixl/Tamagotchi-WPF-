@@ -42,7 +42,9 @@ namespace Tamagotchi_WPF
 
         public static void SaveTama(Tama? tama)
         {
-
+            GameState.PlayerTama.TamaId = tama.TamaId;
+            //GameState.PlayerTama = tama;
+            SaveTamaFile();
 
             //bool saved = false;
             //int counter = 0;

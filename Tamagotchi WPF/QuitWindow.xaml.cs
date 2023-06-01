@@ -22,6 +22,7 @@ namespace Tamagotchi_WPF
     public partial class QuitWindow : Window
     {
         public Game GM { get; set; }
+        public bool CloseProgram;
         public QuitWindow()
         {
             InitializeComponent();
@@ -32,6 +33,7 @@ namespace Tamagotchi_WPF
             GM.Overlay.Visibility = Visibility.Collapsed;
             GM.Overlay.IsHitTestVisible = false;
             this.Close();
+            GameState.Instance.QuitAfterSave = false;
             EventAggregator.Broadcast(typeof(DisplaySavesAfterQuitViewModel));
 
         }
@@ -41,6 +43,8 @@ namespace Tamagotchi_WPF
             GM.Overlay.Visibility = Visibility.Collapsed;
             GM.Overlay.IsHitTestVisible = false;
             this.Close();
+            GameState.Instance.QuitAfterSave = true;
+            EventAggregator.Broadcast(typeof(DisplaySavesAfterQuitViewModel));
         }
 
         private void btn_QuitGame_Click(object sender, RoutedEventArgs e)
@@ -48,6 +52,7 @@ namespace Tamagotchi_WPF
             GM.Overlay.Visibility = Visibility.Collapsed;
             GM.Overlay.IsHitTestVisible = false;
             this.Close();
+            Application.Current.Shutdown();
         }
 
         private void btn_Close_Click(object sender, RoutedEventArgs e)
