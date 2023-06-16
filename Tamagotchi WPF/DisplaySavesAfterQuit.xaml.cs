@@ -36,7 +36,7 @@ namespace Tamagotchi_WPF
                     FileHandling.SaveTama(tama);
                     if (GameState.Instance.QuitAfterSave) // ?? -> QuitWindow public boolean
                     {
-
+                        Application.Current.Shutdown();
                     }
                 }
                 else

@@ -30,6 +30,11 @@ namespace Tamagotchi_WPF
             InitializeComponent();
         }
 
+        private void Btn_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Hello!");
+        }
+
         private void btn_Next_Click(object sender, RoutedEventArgs e)
         {
             if (sender is Button)
